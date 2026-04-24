@@ -1243,7 +1243,7 @@
   <!-- ══ STANDINGS ══ -->
   <section id="standings" class="section">
     <div class="section-title">Manager Standings</div>
-    <div class="section-desc">Ranked by Round 1 performance rating · Click a row for full squad details</div>
+    <div class="section-desc">Ranked by performance across Rounds 1 and 2 · Click a row for full squad details</div>
 
     <table class="standings-table" id="standings-table">
       <thead>
@@ -1264,7 +1264,7 @@
   <!-- ══ SQUADS ══ -->
   <section id="squads" class="section">
     <div class="section-title">Squad Viewer</div>
-    <div class="section-desc">Browse every manager's signed players from Round 1</div>
+    <div class="section-desc">Browse every manager's signed players after Rounds 1 and 2</div>
 
     <div class="search-bar">
       <input class="search-input" type="text" placeholder="Search manager or player..." id="squad-search" oninput="filterSquads()">
@@ -1360,7 +1360,7 @@
   <!-- ══ SQUAD REVIEWS ══ -->
   <section id="reviews" class="section">
     <div class="section-title">Squad Reviews</div>
-    <div class="section-desc">Brutally honest analysis of every Round 1 squad · No managers were harmed in the writing of this page (emotionally maybe)</div>
+    <div class="section-desc">Brutally honest analysis of every squad after Rounds 1 and 2 · No managers were harmed in the writing of this page (emotionally maybe)</div>
 
     <div id="reviews-container"></div>
   </section>
@@ -1418,7 +1418,7 @@
       ${[...Array(5)].map((_,i) => `
       <div class="report-placeholder">
         <div class="report-week">Gameweek ${i+1}</div>
-        <div class="report-pending">⏳ Pending simulation...</div>
+        <div class="report-pending">⏳ Pending season kick-off...</div>
       </div>`).join('')}
     </div>
   </section>
@@ -2510,7 +2510,7 @@ const reviews = [
     compReason: "Built it early, ran off with it, occasionally pops up to remind everyone he is still there.",
     flames: '🔥🔥🔥🔥🔥',
     flameCaption: 'Still on fire. Still annoying.',
-    review: "<strong>Cotton</strong>'s Round 2 consisted of signing <strong>Keith Gillespie</strong> for £0.3m and going back to sleep. That is it. That is the entire round. When you have already locked in Keane, Cantona, Irwin, Scholes, Neville, Adams, Ehiogu and Sheringham in Round 1, you can afford to treat Round 2 like a post-holiday Monday.<br><br>The only stumble was losing out on Mark Bosnich at £3.5m, but the squad already has enough depth that the goalkeeper situation is barely even a concern. 11 players signed, £4.5m left for 5 positions, and a squad so balanced that other managers are starting to make darkly passive-aggressive comments in the group chat.<br><br>This continues to be the clear Round 1+2 winner. The only way Cotton loses from here is if the simulation decides Gary Neville has a nervous breakdown in November.",
+    review: "<strong>Cotton</strong>'s Round 2 consisted of signing <strong>Keith Gillespie</strong> for £0.3m and going back to sleep. That is it. That is the entire round. When you have already locked in Keane, Cantona, Irwin, Scholes, Neville, Adams, Ehiogu and Sheringham in Round 1, you can afford to treat Round 2 like a post-holiday Monday.<br><br>The only stumble was losing out on Mark Bosnich at £3.5m, but the squad already has enough depth that the goalkeeper situation is barely even a concern. 11 players signed, £4.5m left for 5 positions, and a squad so balanced that other managers are starting to make darkly passive-aggressive comments in the group chat.<br><br>This continues to be the clear Round 1+2 winner. The only way Cotton loses from here is if Gary Neville has a sudden dip in form around November.",
     good: 'Won Gillespie at £0.3m when it looked like the market might heat up',
     bad: 'Five players still to sign with £4.5m means the bench will be, shall we say, ambitious'
   },
