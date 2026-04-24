@@ -1178,7 +1178,6 @@
     <div class="badge">⚽ Fantasy League</div>
     <h1>Always<span>Last Season</span></h1>
     <p class="header-sub">the retro fantasy football game</p>
-    <p class="header-creator">A game invented by <strong>David Broome</strong></p>
   </div>
   <div class="pitch-deco"></div>
 </header>
@@ -1200,7 +1199,7 @@
   <!-- ══ OVERVIEW ══ -->
   <section id="overview" class="section active">
     <div class="section-title">League Overview</div>
-    <div class="section-desc">Round 1 complete · Round 2 bidding open · Season simulation pending · A game invented by David Broome</div>
+    <div class="section-desc">Round 1 and Round 2 complete · Round 3 upcoming · Season awaiting kick-off</div>
 
     <div class="stats-row">
       <div class="stat-card">
@@ -1210,33 +1209,33 @@
       </div>
       <div class="stat-card">
         <div class="stat-card-label">Players Signed</div>
-        <div class="stat-card-value">76</div>
-        <div class="stat-card-sub">Across Round 1</div>
+        <div class="stat-card-value">121</div>
+        <div class="stat-card-sub">Across Rounds 1 & 2</div>
       </div>
       <div class="stat-card">
         <div class="stat-card-label">Total Spent</div>
-        <div class="stat-card-value">£259m</div>
-        <div class="stat-card-sub">Round 1 combined</div>
+        <div class="stat-card-value">£365m</div>
+        <div class="stat-card-sub">Two rounds combined</div>
       </div>
       <div class="stat-card">
         <div class="stat-card-label">Biggest Bid</div>
         <div class="stat-card-value">£18.9m</div>
-        <div class="stat-card-sub">Fowler · Kerr</div>
+        <div class="stat-card-sub">R1: Fowler · Kerr</div>
       </div>
       <div class="stat-card">
-        <div class="stat-card-label">Best Value</div>
-        <div class="stat-card-value">£0.0m</div>
-        <div class="stat-card-sub">Daish · Davies</div>
+        <div class="stat-card-label">R2 Biggest</div>
+        <div class="stat-card-value">£12.0m</div>
+        <div class="stat-card-sub">Collymore · Meyers</div>
       </div>
       <div class="stat-card">
-        <div class="stat-card-label">Draft Rounds</div>
-        <div class="stat-card-value">R2</div>
-        <div class="stat-card-sub">Bidding open now</div>
+        <div class="stat-card-label">Draft Status</div>
+        <div class="stat-card-value">R3</div>
+        <div class="stat-card-sub">Round 3 next</div>
       </div>
     </div>
 
-    <div class="section-title" style="font-size:24px; margin-bottom:8px;">Round 1 Verdict</div>
-    <div class="section-desc">How each manager fared in the opening blind bid auction</div>
+    <div class="section-title" style="font-size:24px; margin-bottom:8px;">Manager Overview</div>
+    <div class="section-desc">Current state after Rounds 1 and 2 · Click any card for full squad details</div>
 
     <div class="cards-grid" id="overview-cards"></div>
   </section>
@@ -1295,8 +1294,28 @@
 
     <div class="round-section">
       <div class="round-header">
-        <span class="round-pill">Round 1</span>
-        <span class="round-title">Blind Bid Auction — Results</span>
+        <span class="round-pill">Round 2</span>
+        <span class="round-title">Latest Round — Results</span>
+      </div>
+      <table class="bids-table">
+        <thead>
+          <tr>
+            <th>Player</th>
+            <th>Club</th>
+            <th>Pos</th>
+            <th>Winning Manager</th>
+            <th>Price Paid</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="bids-body-r2"></tbody>
+      </table>
+    </div>
+
+    <div class="round-section">
+      <div class="round-header">
+        <span class="round-pill" style="background:rgba(255,255,255,0.1); color:var(--muted)">Round 1</span>
+        <span class="round-title">Opening Auction — Results</span>
       </div>
       <table class="bids-table">
         <thead>
@@ -1349,7 +1368,7 @@
   <!-- ══ MATCH REPORTS ══ -->
   <section id="reports" class="section">
     <div class="section-title">Match Reports</div>
-    <div class="section-desc">Weekly results, ratings and drama from the FM simulation</div>
+    <div class="section-desc">Weekly results, ratings and drama as the season unfolds</div>
 
     <div class="holding-screen">
       <div class="holding-icon">⚽</div>
@@ -1358,8 +1377,8 @@
 
       <div class="holding-countdown">
         <div class="countdown-item">
-          <div class="countdown-num" id="cd-rounds">2</div>
-          <div class="countdown-label">Draft Rounds Left</div>
+          <div class="countdown-num" id="cd-rounds">1</div>
+          <div class="countdown-label">Draft Round Left</div>
         </div>
         <div class="countdown-item">
           <div class="countdown-num">38</div>
@@ -1375,10 +1394,22 @@
         </div>
       </div>
 
-      <div class="holding-fixtures">
-        <div class="holding-fixtures-title">🗓 Fixtures</div>
-        <div style="padding: 20px 0; text-align:center; font-family:'Bebas Neue',sans-serif; font-size:28px; color:var(--green); letter-spacing:2px;">Coming Soon</div>
-        <div style="text-align:center; font-family:'Barlow Condensed',sans-serif; font-size:13px; color:var(--muted); padding-bottom:8px;">Fixture list will be updated once the season is confirmed</div>
+      <div class="holding-fixtures" style="max-width:520px">
+        <div class="holding-fixtures-title">🏆 ALS Matchweek 1 — Head-to-Heads</div>
+        <div style="padding: 14px 0 6px; text-align:center; font-family:'Bebas Neue',sans-serif; font-size:22px; color:var(--amber); letter-spacing:2px;">TBC</div>
+        <div style="text-align:center; font-family:'Barlow Condensed',sans-serif; font-size:12px; color:var(--muted); padding-bottom:14px;">Fantasy league fixtures to be announced</div>
+
+        <div class="holding-fixtures-title" style="margin-top:16px">⚽ Premiership Matchweek 1</div>
+        <div class="fixture-row"><span class="fixture-team">Aston Villa</span><span class="fixture-vs">v</span><span class="fixture-team">Bolton</span></div>
+        <div class="fixture-row"><span class="fixture-team">Blackburn</span><span class="fixture-vs">v</span><span class="fixture-team">Man Utd</span></div>
+        <div class="fixture-row"><span class="fixture-team">Chelsea</span><span class="fixture-vs">v</span><span class="fixture-team">Sheff Wed</span></div>
+        <div class="fixture-row"><span class="fixture-team">Coventry</span><span class="fixture-vs">v</span><span class="fixture-team">West Ham</span></div>
+        <div class="fixture-row"><span class="fixture-team">Everton</span><span class="fixture-vs">v</span><span class="fixture-team">Arsenal</span></div>
+        <div class="fixture-row"><span class="fixture-team">Leeds</span><span class="fixture-vs">v</span><span class="fixture-team">Man City</span></div>
+        <div class="fixture-row"><span class="fixture-team">Middlesbrough</span><span class="fixture-vs">v</span><span class="fixture-team">Wimbledon</span></div>
+        <div class="fixture-row"><span class="fixture-team">Nottm Forest</span><span class="fixture-vs">v</span><span class="fixture-team">Newcastle</span></div>
+        <div class="fixture-row"><span class="fixture-team">Southampton</span><span class="fixture-vs">v</span><span class="fixture-team">Liverpool</span></div>
+        <div class="fixture-row"><span class="fixture-team">Tottenham</span><span class="fixture-vs">v</span><span class="fixture-team">QPR</span></div>
       </div>
     </div>
 
@@ -1427,7 +1458,7 @@
 </div>
 
 <footer>
-  Always Last Season Fantasy League · Premier League 95/96 · A game invented by David Broome · Simulated on Football Manager
+  Always Last Season Fantasy League · Premier League 1995/96 · <span style="opacity:0.6; font-style:italic">a David Broome creation</span>
 </footer>
 
 <script>
@@ -1437,142 +1468,221 @@
 
 const managers = [
   {
-    id: 'cotton', name: 'Cotton', fullname: 'Real SoSoBad', manager: 'M. Cotton',
-    players: 10, spent: 35.2, remaining: 4.8, toFill: 6,
-    rating: 'S', ratingLabel: 'Manager of the Round',
-    analysis: 'Undisputedly the best Round 1. Secured the Man Utd spine — Keane, Irwin, Scholes, Neville, Cantona — plus Adams, Ehiogu, Sheringham, McAllister and Butt. Ten of eleven targets won. Only failure was losing Schmeichel by £0.2m. Budget is tight at £4.8m but the squad is near-complete.',
+    id: 'rowe', name: 'Rowe', fullname: "Autoglass Trophy 1992", manager: 'Rowe',
+    players: 14, spent: 39.4, remaining: 0.6, toFill: 2,
+    rating: 'S', ratingLabel: "Squad Practically Complete",
+    analysis: "Stormed Round 2 with 7 more wins including a £9.1m swoop for Rob Lee. Now has <strong>14 players and only 2 slots left to fill</strong>, with a balanced squad combining stardust (Gullit, Giggs, Le Tissier, Yeboah, Rob Lee) with solid utility picks. Budget almost gone at £0.6m but the squad does not need much more.",
     squad: [
-      {name:'Roy Keane',pos:'MF',club:'Man Utd'},{name:'Denis Irwin',pos:'DF',club:'Man Utd'},
-      {name:'Paul Scholes',pos:'MF',club:'Man Utd'},{name:'Gary Neville',pos:'DF',club:'Man Utd'},
-      {name:'Eric Cantona',pos:'ST',club:'Man Utd'},{name:'Tony Adams',pos:'DF',club:'Arsenal'},
-      {name:'Ugo Ehiogu',pos:'DF',club:'Aston Villa'},{name:'Teddy Sheringham',pos:'ST',club:'Tottenham'},
-      {name:'Gary McAllister',pos:'MF',club:'Leeds'},{name:'Nicky Butt',pos:'MF',club:'Man Utd'}
+      {name:'Matt Le Tissier',pos:'ST',club:'Southampton'},
+      {name:'Ryan Giggs',pos:'MF',club:'Man Utd'},
+      {name:'Ruud Gullit',pos:'MF',club:'Chelsea'},
+      {name:'Tony Yeboah',pos:'ST',club:'Leeds'},
+      {name:'Robbie Earle',pos:'MF',club:'Wimbledon'},
+      {name:'Julian Dicks',pos:'DF',club:'West Ham'},
+      {name:'Lucas Radebe',pos:'DF',club:'Leeds'},
+      {name:'Alan Wright',pos:'DF',club:'Aston Villa'},
+      {name:'Dominic Matteo',pos:'MF',club:'Liverpool'},
+      {name:'Gordon Strachan',pos:'MF',club:'Coventry'},
+      {name:'Henning Berg',pos:'DF',club:'Blackburn'},
+      {name:'John Lukic',pos:'GK',club:'Leeds'},
+      {name:'Mark Stein',pos:'ST',club:'Chelsea'},
+      {name:'Rob Lee',pos:'MF',club:'Newcastle'},
     ]
   },
   {
-    id: 'roach', name: 'Roach', fullname: 'Eze Ya Later', manager: 'S. Roach',
-    players: 9, spent: 30.8, remaining: 9.2, toFill: 7,
-    rating: 'S', ratingLabel: 'Masterclass in Consistency',
-    analysis: 'A flat £3.6m bid on almost everything secured 9 players including Asprilla, Kinkladze, Pallister, Le Saux, Hinchcliffe, Winterburn, Batty, Sherwood and Solano. Dominated the middle market. Only lost Le Tissier and Flowers to higher specialist bids. £9.2m left gives decent room.',
+    id: 'holt', name: 'Holt', fullname: "Kalima Shakhtar D", manager: 'Holt',
+    players: 14, spent: 31.1, remaining: 8.9, toFill: 2,
+    rating: 'S', ratingLabel: "The Maverick Strategist",
+    analysis: "Pulled off the trick of the round — bid £0 on five different players and won them all. 14 players now signed for just £31.1m total, with £8.9m still in the bank. A genuinely unorthodox approach that has left Holt with a full squad, money to spare, and the rest of the league wondering how.",
     squad: [
-      {name:'Faustino Asprilla',pos:'ST',club:'Newcastle'},{name:'Giorgi Kinkladze',pos:'MF',club:'Man City'},
-      {name:'Gary Pallister',pos:'DF',club:'Man Utd'},{name:'Graeme Le Saux',pos:'DF',club:'Blackburn'},
-      {name:'Andy Hinchcliffe',pos:'DF',club:'Everton'},{name:'Nigel Winterburn',pos:'DF',club:'Arsenal'},
-      {name:'David Batty',pos:'MF',club:'Newcastle'},{name:'Tim Sherwood',pos:'MF',club:'Blackburn'},
-      {name:'Nolberto Solano',pos:'MF',club:'Bolton'}
+      {name:'Tim Flowers',pos:'GK',club:'Blackburn'},
+      {name:'Gareth Southgate',pos:'DF',club:'Aston Villa'},
+      {name:'Steve Staunton',pos:'DF',club:'Aston Villa'},
+      {name:'Philippe Albert',pos:'DF',club:'Newcastle'},
+      {name:'Jason McAteer',pos:'DF',club:'Liverpool'},
+      {name:'Chris Armstrong',pos:'ST',club:'Tottenham'},
+      {name:'Øyvind Leonhardsen',pos:'MF',club:'Wimbledon'},
+      {name:'Ruel Fox',pos:'MF',club:'Tottenham'},
+      {name:'Steve Stone',pos:'MF',club:'Nottm Forest'},
+      {name:'Andy Townsend',pos:'MF',club:'Aston Villa'},
+      {name:'Dean Holdsworth',pos:'ST',club:'Wimbledon'},
+      {name:'Des Lyttle',pos:'DF',club:'Nottm Forest'},
+      {name:'Gary Charles',pos:'DF',club:'Aston Villa'},
+      {name:'Ian Walker',pos:'GK',club:'Tottenham'},
     ]
   },
   {
-    id: 'holt', name: 'Holt', fullname: 'Kalima Shakhtar D', manager: 'I. Holt',
-    players: 9, spent: 30.9, remaining: 9.1, toFill: 7,
-    rating: 'A', ratingLabel: "League's Best Defensive Recruiter",
-    analysis: 'Nine players focused on a solid backline — Southgate, Staunton, Albert, McAteer, Elliott, Watson, Peacock, Howey — plus keeper Flowers and flair from Leonhardsen, Fox, Stone, Armstrong. Strong defensive foundation but attacking options are limited. £9.1m left.',
+    id: 'masterman', name: 'Masterman', fullname: "Best Tomwich Albion", manager: 'Masterman',
+    players: 9, spent: 27.8, remaining: 12.2, toFill: 7,
+    rating: 'A', ratingLabel: "Dramatic Bounce Back",
+    analysis: "A thunderous Round 2 that vindicates the sluggish start. Won 6 of 8 bids including Hendry, Barnes, Ruddock, Howey, Draper and Hartson — all sensible, all value. Now has 9 players and £12.2m left for 7 more positions. The dinner must have ended.",
     squad: [
-      {name:'Tim Flowers',pos:'GK',club:'Blackburn'},{name:'Gareth Southgate',pos:'DF',club:'Aston Villa'},
-      {name:'Steve Staunton',pos:'DF',club:'Aston Villa'},{name:'Philippe Albert',pos:'DF',club:'Newcastle'},
-      {name:'Jason McAteer',pos:'DF',club:'Liverpool'},{name:'Chris Armstrong',pos:'ST',club:'Tottenham'},
-      {name:'Øyvind Leonhardsen',pos:'MF',club:'Wimbledon'},{name:'Ruel Fox',pos:'MF',club:'Tottenham'},
-      {name:'Steve Stone',pos:'MF',club:'Nottm Forest'}
+      {name:'David Seaman',pos:'GK',club:'Arsenal'},
+      {name:'Darren Anderton',pos:'MF',club:'Tottenham'},
+      {name:'Ian Wright',pos:'ST',club:'Arsenal'},
+      {name:'Colin Hendry',pos:'DF',club:'Blackburn'},
+      {name:'John Barnes',pos:'MF',club:'Liverpool'},
+      {name:'John Hartson',pos:'ST',club:'Arsenal'},
+      {name:'Mark Draper',pos:'MF',club:'Aston Villa'},
+      {name:'Neil Ruddock',pos:'DF',club:'Liverpool'},
+      {name:'Steve Howey',pos:'DF',club:'Newcastle'},
     ]
   },
   {
-    id: 'smyth', name: 'Smyth', fullname: "I Will Love It If We Beat Them United", manager: 'R. Smyth',
-    players: 9, spent: 32.0, remaining: 8.0, toFill: 7,
-    rating: 'A', ratingLabel: 'Stellar Focal Point Strategy',
-    analysis: 'Blew £15m on Shearer — the single highest bid of the round. Despite that outlay secured 8 more on bargain bids: Dublin, Barmby, Babb, Benali, Beresford, Miklosko, Dubbery, Sinclair. Top-heavy squad with elite striker but very thin supporting cast. Only £8m left for 7 positions.',
+    id: 'cotton', name: 'Cotton', fullname: "Real SoSoBad", manager: 'Cotton',
+    players: 11, spent: 35.5, remaining: 4.5, toFill: 5,
+    rating: 'A', ratingLabel: "Cruising",
+    analysis: "Only needed to pick up Keith Gillespie for £0.3m to bring the squad to 11 players. Still has £4.5m remaining for 5 positions, which is tight, but the elite core (Keane, Cantona, Irwin, Scholes, Adams) makes this one of the most complete squads in the league.",
     squad: [
-      {name:'Alan Shearer',pos:'ST',club:'Blackburn'},{name:'Dion Dublin',pos:'ST',club:'Coventry'},
-      {name:'Nick Barmby',pos:'MF',club:'Middlesbrough'},{name:'Phil Babb',pos:'DF',club:'Liverpool'},
-      {name:'Francis Benali',pos:'DF',club:'Southampton'},{name:'John Beresford',pos:'DF',club:'Newcastle'},
-      {name:'Luděk Mikloško',pos:'GK',club:'West Ham'},{name:'Michael Dubbery',pos:'DF',club:'Chelsea'},
-      {name:'Trevor Sinclair',pos:'MF',club:'QPR'}
+      {name:'Roy Keane',pos:'MF',club:'Man Utd'},
+      {name:'Denis Irwin',pos:'DF',club:'Man Utd'},
+      {name:'Paul Scholes',pos:'MF',club:'Man Utd'},
+      {name:'Gary Neville',pos:'DF',club:'Man Utd'},
+      {name:'Eric Cantona',pos:'ST',club:'Man Utd'},
+      {name:'Tony Adams',pos:'DF',club:'Arsenal'},
+      {name:'Ugo Ehiogu',pos:'DF',club:'Aston Villa'},
+      {name:'Teddy Sheringham',pos:'ST',club:'Tottenham'},
+      {name:'Gary McAllister',pos:'MF',club:'Leeds'},
+      {name:'Nicky Butt',pos:'MF',club:'Man Utd'},
+      {name:'Keith Gillespie',pos:'MF',club:'Newcastle'},
     ]
   },
   {
-    id: 'rowe', name: 'Rowe', fullname: 'Autoglass Trophy 1992', manager: 'J. Rowe',
-    players: 7, spent: 20.7, remaining: 19.3, toFill: 9,
-    rating: 'A', ratingLabel: 'Vision & Flair Focused',
-    analysis: 'Clear vision for flair players. Gullit at £2m, Giggs at £4m, Le Tissier at £6m, Yeboah at £4m, Earle, Dicks, Radebe. Seven of eleven bids won. Best remaining budget among the heavy spenders at £19.3m — gives excellent flexibility for Round 2 and beyond.',
+    id: 'hodgson', name: 'Hodgson', fullname: "Not Sure", manager: 'Hodgson',
+    players: 10, spent: 35.7, remaining: 4.3, toFill: 6,
+    rating: 'A', ratingLabel: "Finally Showed Conviction",
+    analysis: "Spent big and got big. £11m each on Cole and Sutton is aggressive but secured two proper goalscorers. Added Dennis Wise and Anders Limpar for creativity. 10 players now, £4.3m left for 6. A completely different manager to the one who missed Yorke and Fowler in Round 1.",
     squad: [
-      {name:'Matt Le Tissier',pos:'ST',club:'Southampton'},{name:'Ryan Giggs',pos:'MF',club:'Man Utd'},
-      {name:'Ruud Gullit',pos:'MF',club:'Chelsea'},{name:'Tony Yeboah',pos:'ST',club:'Leeds'},
-      {name:'Robbie Earle',pos:'MF',club:'Wimbledon'},{name:'Julian Dicks',pos:'DF',club:'West Ham'},
-      {name:'Lucas Radebe',pos:'DF',club:'Leeds'}
+      {name:'Steve McManaman',pos:'MF',club:'Liverpool'},
+      {name:'Mark Crossley',pos:'GK',club:'Nottm Forest'},
+      {name:'Chris Perry',pos:'DF',club:'Wimbledon'},
+      {name:'Dejan Stefanovic',pos:'DF',club:'Sheff Wed'},
+      {name:'Ian Woan',pos:'MF',club:'Nottm Forest'},
+      {name:'Warren Barton',pos:'DF',club:'Newcastle'},
+      {name:'Anders Limpar',pos:'MF',club:'Everton'},
+      {name:'Andy Cole',pos:'ST',club:'Man Utd'},
+      {name:'Chris Sutton',pos:'ST',club:'Blackburn'},
+      {name:'Dennis Wise',pos:'MF',club:'Chelsea'},
     ]
   },
   {
-    id: 'hodgson', name: 'Hodgson', fullname: 'Not Sure', manager: 'D. Hodgson',
-    players: 6, spent: 11.6, remaining: 28.4, toFill: 10,
-    rating: 'B', ratingLabel: 'Solid Squad Builder',
-    analysis: 'Missed on Yorke and Fowler despite bidding over £10m for each — a significant calibration failure. Recovered well with McManaman, Crossley, Perry, Stefanovic, Woan, Barton. Six reliable players but the XI is still far from complete. £28.4m remaining gives strong Round 2 options.',
+    id: 'meyers', name: 'Meyers', fullname: "I'll Be Back Four", manager: 'Meyers',
+    players: 8, spent: 29.6, remaining: 10.4, toFill: 8,
+    rating: 'A', ratingLabel: "The Build Continues",
+    analysis: "Got the big one — Collymore at £12m — and paired him with David Platt (genuine bargain for a player of that pedigree), Duncan Ferguson, and Saša Ćurčić at £0.1m. 8 players now of genuinely exceptional quality with £10.4m still available. The squad is coming together with real class.",
     squad: [
-      {name:'Steve McManaman',pos:'MF',club:'Liverpool'},{name:'Mark Crossley',pos:'GK',club:'Nottm Forest'},
-      {name:'Chris Perry',pos:'DF',club:'Wimbledon'},{name:'Dejan Stefanovic',pos:'DF',club:'Sheff Wed'},
-      {name:'Ian Woan',pos:'MF',club:'Nottm Forest'},{name:'Warren Barton',pos:'DF',club:'Newcastle'}
+      {name:'Peter Schmeichel',pos:'GK',club:'Man Utd'},
+      {name:'Dennis Bergkamp',pos:'ST',club:'Arsenal'},
+      {name:'Andrei Kanchelskis',pos:'MF',club:'Everton'},
+      {name:'Juninho Paulista',pos:'MF',club:'Middlesbrough'},
+      {name:'David Platt',pos:'MF',club:'Arsenal'},
+      {name:'Duncan Ferguson',pos:'ST',club:'Everton'},
+      {name:'Saša Ćurčić',pos:'MF',club:'Bolton'},
+      {name:'Stan Collymore',pos:'ST',club:'Liverpool'},
     ]
   },
   {
-    id: 'meyers', name: 'Meyers', fullname: "I'll Be Back Four", manager: 'P. Meyers',
-    players: 4, spent: 13.0, remaining: 27.0, toFill: 12,
-    rating: 'B', ratingLabel: 'Quality Over Quantity',
-    analysis: 'Only 4 players but the quality is extraordinary — Schmeichel, Bergkamp, Kanchelskis and Juninho. Schmeichel sniped from Cotton by just £0.2m. No strikers or defenders yet but £27m gives serious Round 2 firepower. Quality over quantity, and the quality is exceptional.',
+    id: 'roach', name: 'Roach', fullname: "Eze Ya Later", manager: 'Roach',
+    players: 10, spent: 34.8, remaining: 5.2, toFill: 6,
+    rating: 'A', ratingLabel: "Won the Keeper War",
+    analysis: "Only one target this round — Mark Bosnich at £4m — but secured a top-quality goalkeeper in a thin market. Now has 10 players and £5.2m remaining for 6 positions. Still one of the better-balanced squads in the league.",
     squad: [
-      {name:'Peter Schmeichel',pos:'GK',club:'Man Utd'},{name:'Dennis Bergkamp',pos:'ST',club:'Arsenal'},
-      {name:'Andrei Kanchelskis',pos:'MF',club:'Everton'},{name:'Juninho Paulista',pos:'MF',club:'Middlesbrough'}
+      {name:'Faustino Asprilla',pos:'ST',club:'Newcastle'},
+      {name:'Giorgi Kinkladze',pos:'MF',club:'Man City'},
+      {name:'Gary Pallister',pos:'DF',club:'Man Utd'},
+      {name:'Graeme Le Saux',pos:'DF',club:'Blackburn'},
+      {name:'Andy Hinchcliffe',pos:'DF',club:'Everton'},
+      {name:'Nigel Winterburn',pos:'DF',club:'Arsenal'},
+      {name:'David Batty',pos:'MF',club:'Newcastle'},
+      {name:'Tim Sherwood',pos:'MF',club:'Blackburn'},
+      {name:'Nolberto Solano',pos:'MF',club:'Bolton'},
+      {name:'Mark Bosnich',pos:'GK',club:'Aston Villa'},
     ]
   },
   {
-    id: 'davies', name: 'Davies', fullname: "Paul McGregor's Mullet", manager: 'M. Davies',
-    players: 5, spent: 16.0, remaining: 24.0, toFill: 11,
-    rating: 'B', ratingLabel: 'Tactical Approach',
-    analysis: 'Won the 5-way bidding war for Ginola at £5m, plus Pearce, Bryan Roy, Wilcox and the genius £0 Daish. Five players but Ginola is a genuine star and Bryan Roy is a significantly underrated pick. Lost on Irwin and Albert to deeper pockets. £24m remaining is strong.',
+    id: 'smyth', name: 'Smyth', fullname: "I Will Love It If We Beat Them United", manager: 'Smyth',
+    players: 12, spent: 34.25, remaining: 5.75, toFill: 4,
+    rating: 'B', ratingLabel: "Scraping By",
+    analysis: "Budget constraints forced a very low-key round — £2m for Dan Petrescu plus two near-free picks. 12 players signed but the squad remains absurdly top-heavy with Shearer carrying everything. £5.75m for 4 positions is workable.",
     squad: [
-      {name:'David Ginola',pos:'MF',club:'Newcastle'},{name:'Stuart Pearce',pos:'DF',club:'Nottm Forest'},
-      {name:'Bryan Roy',pos:'MF',club:'Nottm Forest'},{name:'Jason Wilcox',pos:'MF',club:'Blackburn'},
-      {name:'Liam Daish',pos:'DF',club:'Coventry'}
+      {name:'Alan Shearer',pos:'ST',club:'Blackburn'},
+      {name:'Dion Dublin',pos:'ST',club:'Coventry'},
+      {name:'Nick Barmby',pos:'MF',club:'Middlesbrough'},
+      {name:'Phil Babb',pos:'DF',club:'Liverpool'},
+      {name:'Francis Benali',pos:'DF',club:'Southampton'},
+      {name:'John Beresford',pos:'DF',club:'Newcastle'},
+      {name:'Luděk Mikloško',pos:'GK',club:'West Ham'},
+      {name:'Michael Dubbery',pos:'DF',club:'Chelsea'},
+      {name:'Trevor Sinclair',pos:'MF',club:'QPR'},
+      {name:'Dan Petrescu',pos:'MF',club:'Chelsea'},
+      {name:'Julian Joachim',pos:'ST',club:'Aston Villa'},
+      {name:'Stephen Carr',pos:'DF',club:'Tottenham'},
     ]
   },
   {
-    id: 'barber', name: 'Barber', fullname: 'Sonnet FC', manager: 'D. Barber',
-    players: 4, spent: 7.8, remaining: 32.2, toFill: 12,
-    rating: 'B', ratingLabel: 'The Patient Accumulator',
-    analysis: 'Most budget remaining of anyone. Only 4 players but smart value picks — Beckham at £3.5m, Redknapp at £2.5m, Pressman at £0.8m, Watson at £1m. Failed on the Big Three (Shearer, Fowler, Keane) but enters Round 2 as the most dangerous bidder with £32.2m and 12 positions to fill.',
+    id: 'davies', name: 'Davies', fullname: "Paul McGregor's Mullet", manager: 'Davies',
+    players: 8, spent: 21.0, remaining: 19.0, toFill: 8,
+    rating: 'B', ratingLabel: "Slow and Frustrated",
+    analysis: "Won 3 of 10 bids and finished level on the David James tiebreaker with Bareham. Added Ian Taylor for free, Keown for £3m, Bruce for £2m. 8 players (pending James outcome) and budget intact. The famous Round 1 attacking flair still has no strikers behind it.",
     squad: [
-      {name:'David Beckham',pos:'MF',club:'Man Utd'},{name:'Jamie Redknapp',pos:'MF',club:'Liverpool'},
-      {name:'Kevin Pressman',pos:'GK',club:'Sheff Wed'},{name:'Steve Watson',pos:'DF',club:'Newcastle'}
+      {name:'David Ginola',pos:'MF',club:'Newcastle'},
+      {name:'Stuart Pearce',pos:'DF',club:'Nottm Forest'},
+      {name:'Bryan Roy',pos:'MF',club:'Nottm Forest'},
+      {name:'Jason Wilcox',pos:'MF',club:'Blackburn'},
+      {name:'Liam Daish',pos:'DF',club:'Coventry'},
+      {name:'Ian Taylor',pos:'MF',club:'Aston Villa'},
+      {name:'Martin Keown',pos:'DF',club:'Arsenal'},
+      {name:'Steve Bruce',pos:'DF',club:'Man Utd'},
     ]
   },
   {
-    id: 'masterman', name: 'Masterman', fullname: 'Best Tomwich Albion', manager: 'T. Masterman',
-    players: 3, spent: 9.0, remaining: 31.0, toFill: 13,
-    rating: 'C', ratingLabel: 'Too Conservative',
-    analysis: 'Only 3 players after Round 1 — Seaman at £2.8m (excellent value), Anderton at £2m, Wright at £4.2m. Lost 8 bids through underbidding. £31m budget is the second largest remaining but 13 positions to fill is a huge task. Must go aggressive in Round 2 or risk being left with scraps.',
+    id: 'barber', name: 'Barber', fullname: "Sonnet FC", manager: 'Barber',
+    players: 8, spent: 16.4, remaining: 23.6, toFill: 8,
+    rating: 'B', ratingLabel: "Patient To A Fault",
+    analysis: "Won 4 of 8 bids this round — Merson, Parlour, Campbell and Hislop for a combined £8.6m. 8 players total with a massive £23.6m still in the bank. Either this is a masterstroke that will land big in Round 3, or Barber is about to overbid dramatically to catch up.",
     squad: [
-      {name:'David Seaman',pos:'GK',club:'Arsenal'},{name:'Darren Anderton',pos:'MF',club:'Tottenham'},
-      {name:'Ian Wright',pos:'ST',club:'Arsenal'}
+      {name:'David Beckham',pos:'MF',club:'Man Utd'},
+      {name:'Jamie Redknapp',pos:'MF',club:'Liverpool'},
+      {name:'Kevin Pressman',pos:'GK',club:'Sheff Wed'},
+      {name:'Steve Watson',pos:'DF',club:'Newcastle'},
+      {name:'Paul Merson',pos:'MF',club:'Arsenal'},
+      {name:'Ray Parlour',pos:'MF',club:'Arsenal'},
+      {name:'Shaka Hislop',pos:'GK',club:'Newcastle'},
+      {name:'Sol Campbell',pos:'DF',club:'Tottenham'},
     ]
   },
   {
-    id: 'bareham', name: 'Bareham', fullname: 'For Sure', manager: 'M. Bareham',
-    players: 3, spent: 16.9, remaining: 23.1, toFill: 13,
-    rating: 'C', ratingLabel: 'Painful Overspend',
-    analysis: 'Yorke at £12.9m is a significant overpay — Shearer money for a player a tier below. Was consistently the second-highest bidder on 8 other players, the most painful spot in a blind auction. Only Bjornbye at £0.5m shows market awareness. £23.1m for 13 remaining positions is going to hurt.',
+    id: 'bareham', name: 'Bareham', fullname: "For Sure", manager: 'Bareham',
+    players: 7, spent: 23.5, remaining: 16.5, toFill: 9,
+    rating: 'A', ratingLabel: "A Warm, Special Round",
+    analysis: "A lovely, thoughtful Round 2. Won 4 of 12 bids including Savo Milošević and Rob Jones — both shrewd value picks that say more about the manager than the results let on. The David James tiebreaker is pending. 7 players and £16.5m left. Everyone loves a Bareham squad.",
     squad: [
-      {name:'Dwight Yorke',pos:'ST',club:'Aston Villa'},{name:'Gary Speed',pos:'MF',club:'Leeds'},
-      {name:'Stig Inge Bjørnbye',pos:'DF',club:'Liverpool'}
+      {name:'Dwight Yorke',pos:'ST',club:'Aston Villa'},
+      {name:'Gary Speed',pos:'MF',club:'Leeds'},
+      {name:'Stig Inge Bjørnbye',pos:'DF',club:'Liverpool'},
+      {name:'Andy Sinton',pos:'MF',club:'Tottenham'},
+      {name:'Peter Beagrie',pos:'MF',club:'Man City'},
+      {name:'Rob Jones',pos:'DF',club:'Liverpool'},
+      {name:'Savo Milošević',pos:'ST',club:'Aston Villa'},
     ]
   },
   {
-    id: 'kerr', name: 'Kerr', fullname: 'Do Women Prefer Flowers to Seaman?', manager: 'A. Kerr',
-    players: 4, spent: 35.4, remaining: 4.6, toFill: 12,
-    rating: 'C', ratingLabel: 'All Eggs, One Basket',
-    analysis: 'Spent £33.1m on just Fowler (£18.9m) and Ferdinand (£14.2m). Combined that is more than Cotton spent on ten players. Only £4.6m for twelve remaining positions — will be filling out with journeymen and freebies. Fowler and Ferdinand will score big individually but the squad will likely lose most weeks on aggregate.',
+    id: 'kerr', name: 'Kerr', fullname: "Do Women Prefer Flowers to Seaman?", manager: 'Kerr',
+    players: 7, spent: 35.7, remaining: 4.3, toFill: 9,
+    rating: 'C', ratingLabel: "Still Underwater",
+    analysis: "Budget reality has set in. Three £0.1m bids won — Hignett, Scales, Lee Dixon. 7 players total for a total of £35.7m spent, with £4.3m left for 9 positions. Fowler and Ferdinand remain the entire point of this team.",
     squad: [
-      {name:'Robbie Fowler',pos:'ST',club:'Liverpool'},{name:'Les Ferdinand',pos:'ST',club:'Newcastle'},
-      {name:'Peter Beardsley',pos:'MF',club:'Newcastle'},{name:'Stuart Ripley',pos:'MF',club:'Blackburn'}
+      {name:'Robbie Fowler',pos:'ST',club:'Liverpool'},
+      {name:'Les Ferdinand',pos:'ST',club:'Newcastle'},
+      {name:'Peter Beardsley',pos:'MF',club:'Newcastle'},
+      {name:'Stuart Ripley',pos:'MF',club:'Blackburn'},
+      {name:'Craig Hignett',pos:'MF',club:'Middlesbrough'},
+      {name:'John Scales',pos:'DF',club:'Liverpool'},
+      {name:'Lee Dixon',pos:'DF',club:'Arsenal'},
     ]
-  }
+  },
 ];
+
 
 const bidsR1Unsorted = [
   {player:'Alan Shearer',club:'Blackburn',pos:'Striker',winner:'Smyth',price:'£15.0m'},
@@ -1650,6 +1760,56 @@ const bidsR1Unsorted = [
   {player:'Stig Inge Bjørnbye',club:'Liverpool',pos:'Defender',winner:'Bareham',price:'£0.5m'}
 ];
 const bidsR1 = [...bidsR1Unsorted].sort((a,b) => parseFloat(b.price.replace('£','').replace('m','')) - parseFloat(a.price.replace('£','').replace('m','')));
+
+const bidsR2Unsorted = [
+  {player:'Paul Merson',club:'Arsenal',pos:'Midfielder',winner:'Barber',price:'£3.7m'},
+  {player:'Ray Parlour',club:'Arsenal',pos:'Midfielder',winner:'Barber',price:'£1.5m'},
+  {player:'Shaka Hislop',club:'Newcastle',pos:'Goalkeeper',winner:'Barber',price:'£0.2m'},
+  {player:'Sol Campbell',club:'Tottenham',pos:'Defender',winner:'Barber',price:'£3.2m'},
+  {player:'Andy Sinton',club:'Tottenham',pos:'Midfielder',winner:'Bareham',price:'£1.0m'},
+  {player:'Peter Beagrie',club:'Man City',pos:'Midfielder',winner:'Bareham',price:'£0.1m'},
+  {player:'Rob Jones',club:'Liverpool',pos:'Defender',winner:'Bareham',price:'£1.5m'},
+  {player:'Savo Milošević',club:'Aston Villa',pos:'Striker',winner:'Bareham',price:'£4.0m'},
+  {player:'Keith Gillespie',club:'Newcastle',pos:'Midfielder',winner:'Cotton',price:'£0.3m'},
+  {player:'Ian Taylor',club:'Aston Villa',pos:'Midfielder',winner:'Davies',price:'£0.0m'},
+  {player:'Martin Keown',club:'Arsenal',pos:'Defender',winner:'Davies',price:'£3.0m'},
+  {player:'Steve Bruce',club:'Man Utd',pos:'Defender',winner:'Davies',price:'£2.0m'},
+  {player:'Anders Limpar',club:'Everton',pos:'Midfielder',winner:'Hodgson',price:'£1.0m'},
+  {player:'Andy Cole',club:'Man Utd',pos:'Striker',winner:'Hodgson',price:'£11.0m'},
+  {player:'Chris Sutton',club:'Blackburn',pos:'Striker',winner:'Hodgson',price:'£11.0m'},
+  {player:'Dennis Wise',club:'Chelsea',pos:'Midfielder',winner:'Hodgson',price:'£1.1m'},
+  {player:'Andy Townsend',club:'Aston Villa',pos:'Midfielder',winner:'Holt',price:'£0.0m'},
+  {player:'Dean Holdsworth',club:'Wimbledon',pos:'Striker',winner:'Holt',price:'£0.2m'},
+  {player:'Des Lyttle',club:'Nottm Forest',pos:'Defender',winner:'Holt',price:'£0.0m'},
+  {player:'Gary Charles',club:'Aston Villa',pos:'Defender',winner:'Holt',price:'£0.0m'},
+  {player:'Ian Walker',club:'Tottenham',pos:'Goalkeeper',winner:'Holt',price:'£0.0m'},
+  {player:'Craig Hignett',club:'Middlesbrough',pos:'Midfielder',winner:'Kerr',price:'£0.1m'},
+  {player:'John Scales',club:'Liverpool',pos:'Defender',winner:'Kerr',price:'£0.1m'},
+  {player:'Lee Dixon',club:'Arsenal',pos:'Defender',winner:'Kerr',price:'£0.1m'},
+  {player:'Colin Hendry',club:'Blackburn',pos:'Defender',winner:'Masterman',price:'£4.0m'},
+  {player:'John Barnes',club:'Liverpool',pos:'Midfielder',winner:'Masterman',price:'£3.4m'},
+  {player:'John Hartson',club:'Arsenal',pos:'Striker',winner:'Masterman',price:'£2.2m'},
+  {player:'Mark Draper',club:'Aston Villa',pos:'Midfielder',winner:'Masterman',price:'£2.6m'},
+  {player:'Neil Ruddock',club:'Liverpool',pos:'Defender',winner:'Masterman',price:'£3.0m'},
+  {player:'Steve Howey',club:'Newcastle',pos:'Defender',winner:'Masterman',price:'£3.6m'},
+  {player:'David Platt',club:'Arsenal',pos:'Midfielder',winner:'Meyers',price:'£3.0m'},
+  {player:'Duncan Ferguson',club:'Everton',pos:'Striker',winner:'Meyers',price:'£1.5m'},
+  {player:'Saša Ćurčić',club:'Bolton',pos:'Midfielder',winner:'Meyers',price:'£0.1m'},
+  {player:'Stan Collymore',club:'Liverpool',pos:'Striker',winner:'Meyers',price:'£12.0m'},
+  {player:'Mark Bosnich',club:'Aston Villa',pos:'Goalkeeper',winner:'Roach',price:'£4.0m'},
+  {player:'Alan Wright',club:'Aston Villa',pos:'Defender',winner:'Rowe',price:'£1.4m'},
+  {player:'Dominic Matteo',club:'Liverpool',pos:'Midfielder',winner:'Rowe',price:'£1.5m'},
+  {player:'Gordon Strachan',club:'Coventry',pos:'Midfielder',winner:'Rowe',price:'£0.3m'},
+  {player:'Henning Berg',club:'Blackburn',pos:'Defender',winner:'Rowe',price:'£2.8m'},
+  {player:'John Lukic',club:'Leeds',pos:'Goalkeeper',winner:'Rowe',price:'£2.6m'},
+  {player:'Mark Stein',club:'Chelsea',pos:'Striker',winner:'Rowe',price:'£1.0m'},
+  {player:'Rob Lee',club:'Newcastle',pos:'Midfielder',winner:'Rowe',price:'£9.1m'},
+  {player:'Dan Petrescu',club:'Chelsea',pos:'Midfielder',winner:'Smyth',price:'£2.0m'},
+  {player:'Julian Joachim',club:'Aston Villa',pos:'Striker',winner:'Smyth',price:'£0.15m'},
+  {player:'Stephen Carr',club:'Tottenham',pos:'Defender',winner:'Smyth',price:'£0.1m'}
+];
+const bidsR2 = [...bidsR2Unsorted].sort((a,b) => parseFloat(b.price.replace('£','').replace('m','')) - parseFloat(a.price.replace('£','').replace('m','')));
+
 
 const posTag = p => {
   if (p === 'Goalkeeper' || p === 'GK') return '<span class="pos-tag pos-GK">GK</span>';
@@ -1793,8 +1953,8 @@ function filterSquads() {
 
 // ══ RENDER BIDS ══
 let filteredBids = [...bidsR1];
-function renderBids(list) {
-  const tbody = document.getElementById('bids-body');
+function renderBids(list, tbodyId) {
+  const tbody = document.getElementById(tbodyId || 'bids-body');
   tbody.innerHTML = '';
   list.forEach(b => {
     const tr = document.createElement('tr');
@@ -1814,18 +1974,22 @@ function renderBids(list) {
 function filterBids() {
   const q = document.getElementById('bid-search').value.toLowerCase();
   const pos = document.getElementById('bid-pos-filter').value;
-  let list = bidsR1;
-  if (pos) list = list.filter(b => b.pos === pos);
-  if (q) list = list.filter(b =>
-    b.player.toLowerCase().includes(q) ||
-    b.winner.toLowerCase().includes(q) ||
-    b.club.toLowerCase().includes(q)
-  );
-  renderBids(list);
+  const applyFilter = list => {
+    let f = list;
+    if (pos) f = f.filter(b => b.pos === pos);
+    if (q) f = f.filter(b =>
+      b.player.toLowerCase().includes(q) ||
+      b.winner.toLowerCase().includes(q) ||
+      b.club.toLowerCase().includes(q)
+    );
+    return f;
+  };
+  renderBids(applyFilter(bidsR2), 'bids-body-r2');
+  renderBids(applyFilter(bidsR1), 'bids-body');
 }
 
 // ══ RENDER POOL ══
-const signedPlayers = new Set(bidsR1.map(b => b.player));
+const signedPlayers = new Set([...bidsR1, ...bidsR2].map(b => b.player));
 const allPoolPlayers = [
   {name:'Vince Bartram',club:'Arsenal',pos:'Goalkeeper'},
   {name:'David Seaman',club:'Arsenal',pos:'Goalkeeper'},
@@ -2340,126 +2504,139 @@ function showTab(id) {
 // ══ SQUAD REVIEWS ══
 const reviews = [
   {
-    id: 'cotton',
-    manager: 'Cotton', fullname: 'Real SoSoBad',
-    verdict: 'genius', verdictText: '🧠 Actual Genius',
-    comparison: "Sir Alex Ferguson", compReason: "Built a dynasty by hoarding one club's entire spine. Boring? Yes. Effective? Devastatingly.",
-    flames: '🔥🔥🔥🔥🔥', flameCaption: 'On fire. Annoyingly.',
-    review: "<strong>Cotton</strong> walked into this auction like someone who had done their homework, slept on it, done it again, and then laminated it. While everyone else was bidding emotionally on shiny strikers, Cotton quietly hoovered up the entire <strong>Manchester United midfield and defence</strong> like a man clearing a buffet before anyone else has found their table.<br><br>Keane. Cantona. Irwin. Neville. Scholes. Butt. Adams thrown in for good measure. Ten of eleven bids won. The only miss was Schmeichel, pipped by <em>0.2 million pounds</em> — an amount most of these managers spent on a single bad instinct. If Cotton loses this league it will be because FM decided Gary Neville should get a 4.2 every week, which frankly seems plausible.<br><br>The only mild concern is <strong>£4.8m left for six positions</strong>, which suggests the subs bench will look like a Sunday league team wearing the wrong kit. But honestly? Good luck stopping them.",
-    good: 'Bought a squad so balanced you could use it as a spirit level',
-    bad: 'Has so many Man Utd players the other managers will just assume he supports them IRL'
+    id: 'cotton', manager: 'Cotton', fullname: "Real SoSoBad",
+    verdict: 'genius', verdictText: "🧠 Cruising in First",
+    comparison: "Sir Alex Ferguson",
+    compReason: "Built it early, ran off with it, occasionally pops up to remind everyone he is still there.",
+    flames: '🔥🔥🔥🔥🔥',
+    flameCaption: 'Still on fire. Still annoying.',
+    review: "<strong>Cotton</strong>'s Round 2 consisted of signing <strong>Keith Gillespie</strong> for £0.3m and going back to sleep. That is it. That is the entire round. When you have already locked in Keane, Cantona, Irwin, Scholes, Neville, Adams, Ehiogu and Sheringham in Round 1, you can afford to treat Round 2 like a post-holiday Monday.<br><br>The only stumble was losing out on Mark Bosnich at £3.5m, but the squad already has enough depth that the goalkeeper situation is barely even a concern. 11 players signed, £4.5m left for 5 positions, and a squad so balanced that other managers are starting to make darkly passive-aggressive comments in the group chat.<br><br>This continues to be the clear Round 1+2 winner. The only way Cotton loses from here is if the simulation decides Gary Neville has a nervous breakdown in November.",
+    good: 'Won Gillespie at £0.3m when it looked like the market might heat up',
+    bad: 'Five players still to sign with £4.5m means the bench will be, shall we say, ambitious'
   },
   {
-    id: 'roach',
-    manager: 'Roach', fullname: 'Eze Ya Later',
-    verdict: 'solid', verdictText: '📐 The Algorithmic Bidder',
-    comparison: "George Graham", compReason: "Ruthlessly systematic. No glamour, just results. Everything organised with military precision.",
-    flames: '🔥🔥🔥🔥', flameCaption: 'Quietly excellent.',
-    review: "<strong>Roach</strong> appears to have approached Round 1 with a single, beautiful strategy: bid <strong>£3.6m on literally everything</strong> and see what sticks. This is either the work of a tactical genius or someone who could not be bothered to think about individual player values and just picked a number. Either way, it worked spectacularly.<br><br>Nine players signed including <strong>Asprilla, Kinkladze, Pallister, Le Saux</strong> and an entire defensive regiment. The flat bidding strategy essentially claimed the entire middle market while everyone else was either going nuclear on one player or nodding off at the back.<br><br>The slight concern is <strong>Asprilla</strong>, who in any FM database from this era has the consistency rating of a confused Golden Retriever. He will produce two moments of absolute brilliance and then get substituted off after 60 minutes in six consecutive matches for poor performance. But when he is on, he is on.",
-    good: 'Nine players with budget left. Remarkable composure.',
-    bad: 'Flat bidding strategy could be exploited in Round 2 by anyone who just bids £3.7m'
+    id: 'rowe', manager: 'Rowe', fullname: "Autoglass Trophy 1992",
+    verdict: 'genius', verdictText: "🎯 Nearly Complete",
+    comparison: "Arsène Wenger (title-winning years)",
+    compReason: "Balanced flair with steel, added a £9m midfielder to tie it all together. Absolutely knows what he is doing.",
+    flames: '🔥🔥🔥🔥🔥',
+    flameCaption: 'Completely convinced himself, and now us.',
+    review: "A Round 2 masterclass. <strong>Rowe</strong> went from 7 players to 14 in one go, landing <strong>Rob Lee at £9.1m</strong>, <strong>John Lukic</strong> for a sensible £2.6m, <strong>Henning Berg</strong>, <strong>Alan Wright</strong>, <strong>Dominic Matteo</strong>, <strong>Gordon Strachan</strong>, and <strong>Mark Stein</strong> — a full spread across every position.<br><br>The squad is now genuinely frightening. <strong>Gullit, Giggs, Le Tissier, Yeboah, Rob Lee, Robbie Earle</strong> in midfield. That is ridiculous. An actual title-winning midfield. The only concern is that having spent £39.4m of the £40m budget, Rowe has £0.6m left for their final 2 positions, which means the last two signings will be whoever is left nailed to the bench at Coventry.<br><br>But honestly? Who cares. This squad looks like it could win the thing.",
+    good: 'Rob Lee at £9.1m sounds steep until you realise he is a nailed-on 7+ rating every single week',
+    bad: '£0.6m for the last two players means the 16th signing might technically be a parking cone'
   },
   {
-    id: 'holt',
-    manager: 'Holt', fullname: 'Kalima Shakhtar D',
-    verdict: 'solid', verdictText: '🧱 The Defensive Wall',
-    comparison: "Tony Pulis", compReason: "Obsessed with a solid back five. Attacking intent is for other people's problems.",
-    flames: '🔥🔥🔥', flameCaption: "Won't concede. Might not score either.",
-    review: "<strong>Holt</strong> has assembled a squad that will be absolutely magnificent at not conceding and absolutely silent at scoring. Nine players, eight of whom appear to be defenders or defensive midfielders, and <strong>Chris Armstrong</strong> up front who will presumably be doing it all himself while the rest stand in a line at the halfway line looking stern.<br><br>To be fair, <strong>Southgate, Staunton, Albert</strong> and <strong>Tim Flowers</strong> in goal is a legitimately excellent defensive unit. The concern is that Armstrong is the only striker, and he was Tottenham's second choice behind Sheringham in a team that finished seventh. When Armstrong has a bad week the team will generate the attacking output of a confused traffic cone.<br><br>In FM terms, a great goalkeeper and solid defence generates consistently decent ratings. Holt might be cleverer than we think. Or they might just be Tony Pulis in disguise.",
-    good: 'Defensive foundation is genuinely excellent',
-    bad: 'Chris Armstrong is carrying the entire attacking burden. Chris Armstrong.'
+    id: 'holt', manager: 'Holt', fullname: "Kalima Shakhtar D",
+    verdict: 'genius', verdictText: "🃏 The Maverick",
+    comparison: "Ian Holloway",
+    compReason: "Does it his own way. Goes against the grain. Wins more often than anyone expects, and nobody ever quite knows how.",
+    flames: '🔥🔥🔥🔥🔥',
+    flameCaption: 'The league is quietly terrified.',
+    review: "<strong>Holt</strong> is playing a completely different game to everyone else. While the rest of the league frets over whether to bid £3m or £4m on a marquee player, Holt simply bids <strong>£0</strong> on five different players and wins all five. <strong>Andy Townsend. Des Lyttle. Gary Charles. Ian Walker. Dean Holdsworth for £0.2m.</strong> Nobody else was going to bid. He knew. He just knew.<br><br>This is the squad of a maverick — someone who looks at the player list, ignores the big names, and picks the <em>unusual</em> ones. There is no Shearer. No Cantona. No Fowler. Instead there is Philippe Albert, Gareth Southgate, Steve Staunton, Øyvind Leonhardsen and Tim Flowers as the spine. It should not work. It is going to work.<br><br>14 players signed. <strong>£8.9m still in the bank.</strong> Two positions to fill. Holt has done what nobody thought possible — assembled a near-complete squad on what feels like half the budget everyone else used. The rest of the league are now very, very nervous.",
+    good: 'Five £0 bids, five wins. Genuinely unprecedented market reading.',
+    bad: 'Chris Armstrong is still up front. It doesn\'t fit the maverick narrative. It just doesn\'t.'
   },
   {
-    id: 'smyth',
-    manager: 'Smyth', fullname: 'I Will Love It If We Beat Them United',
-    verdict: 'shaky', verdictText: '💸 Mortgaged the Future',
-    comparison: "Kevin Keegan", compReason: "Spectacular, swashbuckling, emotionally driven. Great fun. Probably won't win the league.",
-    flames: '🔥🔥', flameCaption: 'Brilliant at the top, terrifying at the bottom.',
-    review: "<strong>Smyth</strong> has built a squad that looks exactly like what happens when you give a teenager £40m and a copy of Shoot magazine from 1996. <strong>£15m on Shearer</strong>. Fifteen million pounds. On one player. In a squad of sixteen. That is the financial equivalent of spending your entire holiday budget on the hotel minibar and then wondering why you cannot afford the flights home.<br><br>To be fair, Shearer in the 95/96 FM database is an absolute monster and will probably generate an 8.2 rating every single week regardless of who is around him. The problem is who is around him. <strong>Dublin, Barmby, Benali, Beresford, Miklosko</strong>. That is not a supporting cast. That is a pub team who got lost on the way to the car park.<br><br>Smyth has effectively hired Mick Jagger and booked him to perform in a shed. The headliner is world class. The venue has no roof and the supporting acts are a man with a triangle and someone's uncle on acoustic guitar.",
-    good: 'Shearer will get them points every single week without fail',
-    bad: 'Dublin and Barmby trying to support Shearer is like bringing a cheese sandwich to a Michelin-starred restaurant'
+    id: 'masterman', manager: 'Masterman', fullname: "Best Tomwich Albion",
+    verdict: 'solid', verdictText: "🍽️ Post-Dinner Renaissance",
+    comparison: "Harry Redknapp",
+    compReason: "A bit chaotic, a bit rushed, but somehow it all works out in the end with a last-minute transfer surge.",
+    flames: '🔥🔥🔥',
+    flameCaption: 'Belly full, mind clear, bids flowing.',
+    review: "<strong>Masterman</strong> is back. Whatever Hungarian feast derailed Round 1 has clearly been digested, and Round 2 was a thundering response. <strong>Hendry, Barnes, Ruddock, Howey, Draper, Hartson</strong> — six proper signings in one round. All sensible prices. All real positional upgrades. The squad now has 9 players and looks respectable.<br><br>The Colin Hendry at £4m and John Barnes at £3.4m are particularly good pieces of business. Hendry is a consistent 7+ rating defender, Barnes is a genuine playmaker who will rack up creative ratings every week. Steve Howey at £3.6m is solid. Mark Draper at £2.6m is value.<br><br>The two losses — Chris Sutton at £4.8m and Rob Lee at £5.2m — were painful but ultimately correct. Sutton went to Hodgson for a double-up, Lee went to Rowe for an unmatchable £9.1m. There is no shame in losing either.<br><br>£12.2m left for 7 positions is a workable runway. This is the Masterman we were expecting in Round 1.",
+    good: 'The pivot from sleepy Round 1 to aggressive Round 2 was genuine tactical recovery',
+    bad: 'Still one Hungarian dinner away from accidentally bidding £40m on a Bolton reserve goalkeeper'
   },
   {
-    id: 'rowe',
-    manager: 'Rowe', fullname: 'Autoglass Trophy 1992',
-    verdict: 'decent', verdictText: '🎨 The Romantic',
-    comparison: "Johan Cruyff", compReason: "Prioritised beauty and flair over pragmatism. Will either win everything or implode spectacularly.",
-    flames: '🔥🔥🔥', flameCaption: 'Exciting. Possibly too exciting.',
-    review: "<strong>Rowe</strong> has assembled a squad that reads like a football romanticist's dream shopping list. <strong>Gullit. Giggs. Le Tissier. Yeboah.</strong> These are not players, they are cinema. The squad sheet reads less like a football team and more like the tracklist of a mid-90s football compilation CD you would find in a service station for £3.99.<br><br>Le Tissier at <strong>£6m</strong> is the eyebrow-raiser. He is exceptional in the FM database but plays for Southampton, who in 95/96 were essentially a relegation scrap with a cult hero attached. His ratings will swing wildly depending on whether Southampton are winning, which historically they were not.<br><br>The real wildcard is <strong>Ruud Gullit at £2m</strong>, which is either the bargain of the century or a man who was already phoning it in while planning his Chelsea player-manager career. In FM he will either be a 9.0 every week or retire in November. No middle ground whatsoever.",
-    good: 'Le Tissier at £6m will be box office every week. Drama guaranteed.',
-    bad: 'Gullit is 32 and in FM that means one thing: chaos or retirement, possibly both simultaneously'
+    id: 'hodgson', manager: 'Hodgson', fullname: "Not Sure",
+    verdict: 'solid', verdictText: "⚽ The Slot Disciple",
+    comparison: "Arne Slot",
+    compReason: "Finally doing things properly. Liverpool-obsessed. Knows exactly what they want and pays to get it.",
+    flames: '🔥🔥🔥🔥',
+    flameCaption: 'From confused to conviction in one round.',
+    review: "The transformation is complete. After a Round 1 spent wildly missing bids on Yorke and Fowler, <strong>Hodgson</strong> clearly watched a few Arne Slot press conferences and decided to channel some of that calm, measured, Liverpool-loving decisiveness into Round 2. The result: four wins out of four. <strong>Andy Cole and Chris Sutton for £11m each</strong> is a double strike that will generate points every single week.<br><br>Adding <strong>Anders Limpar and Dennis Wise</strong> to the midfield rounds out a squad that suddenly has genuine shape. 10 players signed. McManaman, Cole, Sutton, Wise, Limpar, Barton, Perry — this is actually a team now.<br><br>The spiritual conversion to Slot-ism appears to have worked. £4.3m left for 6 positions is tight but Hodgson has clearly stopped flailing and started playing the game properly. Liverpool fans in the group chat are either delighted or insufferable — possibly both. <em>Arne would be proud.</em>",
+    good: '£22m on Cole and Sutton sounds mad until you remember both will score 20+ goals',
+    bad: 'Still needs a proper goalkeeper. Crossley is fine but he is not Alisson, and Slot would not tolerate this.'
   },
   {
-    id: 'hodgson',
-    manager: 'Hodgson', fullname: 'Not Sure',
-    verdict: 'decent', verdictText: '🤷 Aptly Named',
-    comparison: "Roy Hodgson", compReason: "Competent, reliable, fundamentally uninspiring. Will probably finish mid-table and everyone will think yeah, fair enough.",
-    flames: '🔥🔥', flameCaption: 'Could be better. Could be worse. Is neither.',
-    review: "The team name <strong>Not Sure</strong> is either a stroke of genius self-awareness or an accidental prophecy, because absolutely nobody — including presumably Hodgson — is sure what this squad is trying to do.<br><br>The headline news is that Hodgson bid <strong>over £10m for both Yorke and Fowler</strong> and got neither. This is not a strategy. This is throwing money at a wall and watching it slide down. The players went for £12.9m and £18.9m respectively, meaning Hodgson's ceiling was £5m short on Yorke and a staggering £8.9m short on Fowler. The bid calibration has the energy of someone who googled how much should I bid and got a 404 error.<br><br>What he did get — <strong>McManaman, Crossley, Perry, Barton</strong> — is fine. Genuinely fine. McManaman is excellent. But with £28.4m left and 10 positions to fill, everything depends on whether Round 2 shows any signs of strategic evolution.",
-    good: 'McManaman is excellent and will be a consistent points scorer all season',
-    bad: 'Missing on Yorke AND Fowler despite bidding £10m+ each is the auction equivalent of tripping over the same speed bump twice'
+    id: 'meyers', manager: 'Meyers', fullname: "I'll Be Back Four",
+    verdict: 'solid', verdictText: "🌟 Quality Personified",
+    comparison: "Pep Guardiola",
+    compReason: "Fewer players than everyone else, but every single one is elite. Quality over quantity, always.",
+    flames: '🔥🔥🔥🔥',
+    flameCaption: 'Building something genuinely special.',
+    review: "A Round 2 to be properly proud of. <strong>Meyers</strong> walked in needing a striker and walked out with <strong>Stan Collymore for £12m</strong> — comfortably outbidding the competition and landing the biggest name still available. That is not a bid, that is a statement.<br><br>Paired with <strong>David Platt</strong> at £3m (an absolute steal for a player of that quality), <strong>Duncan Ferguson</strong> at £1.5m, and the wonderful <strong>Saša Ćurčić</strong> at £0.1m as a wildcard, the squad is taking genuine shape. Schmeichel behind a growing midfield of Kanchelskis, Juninho, Platt and Ćurčić, with Bergkamp and Collymore up top? That is the basis of a truly excellent team.<br><br>Eight players, £10.4m still in the bank, eight positions still to fill — a lot of flexibility, a lot of quality already locked in, and an unmistakable feeling that the other managers have started to take this squad very seriously indeed. The team name was a promise. The promise is being kept.",
+    good: 'Collymore at £12m was the biggest single bid of Round 2 and it was absolutely worth it',
+    bad: 'Still needs a full back four and a backup keeper. The Terminator reference is still slightly premature.'
   },
   {
-    id: 'meyers',
-    manager: 'Meyers', fullname: "I'll Be Back Four",
-    verdict: 'decent', verdictText: '🤖 Playing 4D Chess (Apparently)',
-    comparison: "Arsène Wenger circa 1996", compReason: "Arrived with continental ideas nobody else understood yet. Was laughed at. Will probably be right.",
-    flames: '🔥🔥🔥', flameCaption: 'Trust the process. The process is terrifying.',
-    review: "Four players. <strong>FOUR.</strong> The squad currently has the structural integrity of a table with one leg — but what a leg it is. <strong>Schmeichel, Bergkamp, Kanchelskis and Juninho</strong>. If you could only keep four players from the entire available pool, a strong argument exists that these are the four you would choose.<br><br>The team name <strong>I'll Be Back Four</strong> is a masterpiece — part Terminator, part football pun, part ominous promise to the rest of the league. Consider it a warning shot delivered with a smile.<br><br>The Schmeichel steal — pipping Cotton by exactly <em>£0.2m</em> — was the move of the round. Cotton built an entire Man Utd spine and then lost their goalkeeper by a rounding error. The precision of that bid suggests either exceptional research or an extremely fortunate instinct. Either way, the result is the same: the best goalkeeper in the league, secured.<br><br>Yes, the squad needs eleven more players. Yes, the first XI currently features Schmeichel and ten question marks. But with £27m in the bank and a very clear idea of what good looks like, Round 2 is where this squad gets serious. The foundation is elite. The build starts now.",
-    good: 'Per player, the highest quality in the league. The four best picks of the entire round, arguably.',
-    bad: 'Currently unable to field a five-a-side team — but the goalkeeper alone would probably keep a clean sheet anyway'
+    id: 'roach', manager: 'Roach', fullname: "Eze Ya Later",
+    verdict: 'solid', verdictText: "🧤 Quiet Round, Smart Pick",
+    comparison: "Nigel Pearson",
+    compReason: "Doesn't overthink it. Finds one good bit of business and bolts it on. Squad stays strong.",
+    flames: '🔥🔥🔥',
+    flameCaption: 'Cool, calm, collected.',
+    review: "<strong>Roach</strong> had one job in Round 2: get a goalkeeper. Job done. <strong>Mark Bosnich at £4m</strong> is a very good keeper and a very sensible price, and with that the squad now looks properly balanced. Pallister, Le Saux, Hinchcliffe, Winterburn in front of Bosnich is a genuinely strong defensive unit. Add Asprilla, Kinkladze, Batty, Sherwood and Solano and you have a team.<br><br>The one miss — Andy Cole at £5.1m — was always going to lose to Hodgson's £11m haul. You do not win every bid, and Roach wisely did not throw good money after bad.<br><br>10 players signed, £5.2m left, 6 positions to fill. The flat £3.6m bidding strategy of Round 1 has evolved into something more targeted in Round 2, and the squad is all the better for it.",
+    good: 'Bosnich at £4m solves the goalkeeper gap without breaking the bank',
+    bad: 'Still needs a second striker. Asprilla alone cannot be trusted with the entire attack.'
   },
   {
-    id: 'davies',
-    manager: 'Davies', fullname: "Paul McGregor's Mullet",
-    verdict: 'decent', verdictText: '✂️ Style Over Substance (So Far)',
-    comparison: "Ossie Ardiles", compReason: "Committed to attractive football regardless of practical consequences. Brilliant in patches, questionable overall.",
-    flames: '🔥🔥', flameCaption: 'Business at the front, party at the back.',
-    review: "The team name <strong>Paul McGregor's Mullet</strong> is simultaneously the best and most accurate squad name in the league, because this team is currently all attacking flair at the front and absolutely nothing holding it together at the back.<br><br><strong>Ginola at £5m</strong> won a five-way bidding war, which tells you everything. Five managers looked at the same list and all thought David Ginola, yes, this is the priority. In FM he is extraordinary — pace, dribbling, crossing all maxed out. He will get standing ovations in matches his team loses 4-1.<br><br>The <strong>Liam Daish at £0m</strong> is the bid of the tournament. The gap between the glamour of Ginola and the workmanlike utility of Daish is so vast you could park Wembley in it. <strong>Bryan Roy</strong> is a significantly underrated pick who will generate strong ratings all season — but Davies still has 11 positions to fill and the squad currently has the defensive solidity of a paper parasol in a thunderstorm.",
-    good: 'Ginola will be the most entertaining player in the league by a significant margin',
-    bad: 'Liam Daish is currently the defensive foundation. Let that sink in for a moment.'
+    id: 'smyth', manager: 'Smyth', fullname: "I Will Love It If We Beat Them United",
+    verdict: 'decent', verdictText: "🎲 Scraping Together A Team",
+    comparison: "Kevin Keegan (1996 version)",
+    compReason: "Still emotionally scarred from the Round 1 Shearer splurge. Quietly patching things together now.",
+    flames: '🔥🔥',
+    flameCaption: 'Gets the job done, barely.',
+    review: "With only £8m to play with after the Shearer-Dublin Round 1 bonanza, <strong>Smyth</strong> had to play Round 2 in the bargain bin. <strong>Dan Petrescu at £2m</strong> is actually really good business — solid attacking full-back who will get forward and generate ratings. <strong>Julian Joachim at £0.15m</strong> and <strong>Stephen Carr at £0.1m</strong> are youth-flavoured near-frees.<br><br>12 players now signed with £5.75m left for 4 positions. The squad remains absurdly top-heavy: Shearer, Dublin, and the nine Smyth-apologetics. But Petrescu is a real upgrade and the shape is slowly becoming recognisable as a football team rather than an auction disaster.",
+    good: 'Dan Petrescu at £2m is quietly one of the better value signings of Round 2',
+    bad: 'Stephen Carr is 19. Julian Joachim cost less than a pint. The squad depth remains, um, philosophical.'
   },
   {
-    id: 'barber',
-    manager: 'Barber', fullname: 'Sonnet FC',
-    verdict: 'decent', verdictText: '🏦 The Vault',
-    comparison: "Claudio Ranieri pre-Leicester", compReason: "Patient, methodical, biding their time. Either brilliant timing or complete paralysis. History will decide.",
-    flames: '🔥🔥🔥', flameCaption: 'Sitting on a throne of money. For now.',
-    review: "<strong>Barber</strong> has £32.2m remaining. <strong>Thirty two million pounds.</strong> In a league where Kerr spent £33m on two players, Barber has kept nearly all of their budget intact while quietly picking up <strong>Beckham and Redknapp</strong> alongside two functional fillers.<br><br>The Beckham pick at £3.5m deserves genuine credit — young, elite FM attributes, Man Utd player in a title-winning side. He will generate consistent 7+ ratings all season. Redknapp at £2.5m is similarly sensible. Two technically gifted midfielders who play for good clubs.<br><br>The question is whether Barber can spend £32m wisely in Round 2. Having the most money counts for nothing if you panic-buy or repeat the Bareham special of overbidding on one player and running out. With 12 positions to fill, Barber enters Round 2 as the most dangerous manager in the league — or the most likely to implode under the pressure of actually having to make decisions.<br><br>Sonnet FC. Named presumably because all the good stuff arrives at the end and everything before is just elaborate preparation.",
-    good: '£32.2m to spend. Can literally buy anyone still available.',
-    bad: 'Kevin Pressman and Steve Watson are two of your four players. Kevin Pressman.'
+    id: 'davies', manager: 'Davies', fullname: "Paul McGregor's Mullet",
+    verdict: 'decent', verdictText: "⚖️ Mixed Bag",
+    comparison: "Tim Sherwood",
+    compReason: "Looks solid on paper, has definite flair moments, but there are questions about the overall project.",
+    flames: '🔥🔥',
+    flameCaption: 'Still waiting for it all to click.',
+    review: "<strong>Davies</strong> won three of ten bids in Round 2, which is a frustrating success rate. <strong>Martin Keown</strong> at £3m, <strong>Steve Bruce</strong> at £2m, and <strong>Ian Taylor for free</strong> are all sensible additions, but the round was also marked by losing seven bids including Andy Cole, Chris Sutton, and John Barnes.<br><br>The <strong>David James tiebreaker with Bareham is still pending</strong>, which means the 8/9 player count and £16.5m/£19m budget remains in flux. That is an annoying place to be as the draft heads into Round 3.<br><br>The mullet is still mostly party at the back — Bruce, Keown, Pearce, Daish is now a proper back four. But the front end has no striker beyond Ginola dropping into a false nine role, and Davies needs to fix that urgently in Round 3. With £19m still in the bank (pending James), there is plenty of firepower left.",
+    good: 'Keown and Bruce together is a proper veteran centre-back pairing that will rate consistently well',
+    bad: 'Still has no recognised striker. Ginola up front is charming but not sustainable.'
   },
   {
-    id: 'masterman',
-    manager: 'Masterman', fullname: 'Best Tomwich Albion',
-    verdict: 'shaky', verdictText: '😬 Asleep at the Wheel',
-    comparison: "Luiz Felipe Scolari at Chelsea", compReason: "Arrived with credentials, had the tools, somehow made far less of it than everyone expected.",
-    flames: '🔥', flameCaption: 'The fire is barely lit.',
-    review: "<strong>Masterman</strong> has achieved the remarkable feat of spending £9m and ending up with only three players, which statistically means each player cost an average of £3m. That is the same as Cotton paid for Scholes, except Masterman got <strong>Ian Wright</strong> instead — who is 33, brilliant in bursts, and in FM has the durability of a Cadbury Flake in a sauna.<br><br>Reliable sources close to the Masterman household suggest the Round 1 bid sheet was completed in the dangerous window immediately before dinner. And dinner in this particular household is not a sandwich situation. Masterman has a Hungarian wife who cooks like a Michelin-starred Budapest restaurant, and when the smell of <em>paprikás csirke</em> is drifting through the house it is frankly unreasonable to expect anyone — large man or otherwise — to concentrate on midfielder valuations. The leves, the pörkölt, the rétes — it is simply not fair on the other managers. Hungary gave the world Ferenc Puskás. It also, apparently, gave the world a fantasy football bid sheet with thirteen empty slots.<br><br>Seaman at £2.8m is genuinely excellent value. Anderton is fine. The real problem is <strong>13 positions still to fill</strong> with £31m. Masterman must now attack Round 2 with the urgency of a large man who has just been told dinner is on the table.",
-    good: 'Seaman is excellent value. Budget largely intact.',
-    bad: 'Bidding on an empty stomach is no way to run a fantasy football team. Hungary produced Puskás. This produced three players.'
+    id: 'barber', manager: 'Barber', fullname: "Sonnet FC",
+    verdict: 'decent', verdictText: "💰 Hoarder",
+    comparison: "Daniel Levy",
+    compReason: "Sitting on enormous budget. Refuses to spend it. Something dramatic is eventually going to happen.",
+    flames: '🔥🔥',
+    flameCaption: 'The calm before a potential storm.',
+    review: "<strong>Barber</strong> is now two rounds into this auction with <strong>£23.6m still unspent</strong>. That is more money than seven other managers have ever had. The round saw four modest wins — <strong>Paul Merson at £3.7m, Sol Campbell at £3.2m, Ray Parlour at £1.5m, Shaka Hislop at £0.2m</strong> — all decent, none transformative.<br><br>The strategy is clearly to keep powder dry for Round 3, but at this point the powder is becoming a fire hazard. With 8 positions to fill and £23.6m available, Barber could theoretically buy a second Stan Collymore, which is not how fantasy football works but is apparently how Barber plans to play it.<br><br>Beckham, Redknapp, Merson, Parlour, Campbell — a decent midfield spine. But the squad lacks any real star quality and the window to sign big names is closing. Round 3 will be make-or-break.",
+    good: 'Sol Campbell at £3.2m looks like value given his age and quality',
+    bad: '£23.6m left for 8 players means Barber still has to spend an average of £3m per signing. The market is thinning fast.'
   },
   {
-    id: 'bareham',
-    manager: 'Bareham', fullname: 'For Sure',
-    verdict: 'shaky', verdictText: '💀 Second Place in Everything',
-    comparison: "Martin O'Neill at Aston Villa", compReason: "Started with ambition, spent heavily at the top, ran out of resources before the squad was complete.",
-    flames: '🔥', flameCaption: 'Technically on fire. Also technically a disaster.',
-    review: "Being the <em>second highest bidder</em> on eight different players is a very specific kind of suffering. It means Bareham had a plan, executed it with conviction, and was beaten at every single turn by someone who wanted it slightly more. This is the auction equivalent of losing eight consecutive penalty shootouts. You did not play badly. You just always went the wrong way.<br><br><strong>Dwight Yorke at £12.9m</strong> is the number that will haunt this squad. Yorke is good — genuinely good — but Shearer, Fowler and Ferdinand all went for more, and all of them are better. Paying Shearer money for Yorke leaves the budget stretched before the squad is anywhere near complete.<br><br>The team name <strong>For Sure</strong> has aged beautifully badly. For sure what exactly? For sure we will overpay for a striker and watch eight winning bids sail past? Bjornbye at £0.5m is the only bid that showed genuine market awareness, and it is currently propping up a squad with <strong>13 positions to fill and £23m to do it</strong>.",
-    good: 'Yorke is a legitimate star and will score points consistently',
-    bad: 'The squad is currently: Yorke, Gary Speed, and a Norwegian left-back. That is a very specific kind of roster.'
+    id: 'bareham', manager: 'Bareham', fullname: "For Sure",
+    verdict: 'solid', verdictText: "💚 A Lovely Round",
+    comparison: "Claudio Ranieri",
+    compReason: "Warm-hearted, universally loved, makes shrewd picks that everyone respects. A proper football man.",
+    flames: '🔥🔥🔥🔥',
+    flameCaption: 'Bareham is just lovely, isn\'t he?',
+    review: "A genuinely pleasing Round 2 from <strong>Bareham</strong>. You can feel the warmth radiating off this squad. <strong>Savo Milošević at £4m</strong> is the kind of characterful striker pick that only someone with genuine football feeling would make. <strong>Rob Jones at £1.5m</strong> is a proper, proper full-back. <strong>Andy Sinton at £1m</strong> and <strong>Peter Beagrie at £0.1m</strong> are lovely little additions that round out the squad with honest, hard-working players.<br><br>The <strong>David James tiebreaker is pending</strong>, which keeps 9 slots in play and the final budget slightly fluid. But the overall sense is of a squad built with care, intention, and a clear love of the game.<br><br>Round 1 was a painful near-miss experience — eight times second-highest bidder. Round 2 has completely reset the narrative. Four wins out of twelve, smart prices throughout, and a squad that is genuinely starting to look like one that would finish top half. Bareham is one of those managers that the rest of the league is quietly rooting for. A proper football man. We all love it.",
+    good: 'Milošević at £4m is the kind of pick made with genuine football knowledge, not auction panic',
+    bad: 'The James tiebreaker resolution could still swing both directions — a rare moment of uncertainty for the rest of an otherwise rock-solid plan'
   },
   {
-    id: 'kerr',
-    manager: 'Kerr', fullname: 'Do Women Prefer Flowers to Seaman?',
-    verdict: 'disaster', verdictText: '🚨 Financial Implosion',
-    comparison: "Leeds United 2001 to 2004", compReason: "Spent recklessly on two superstars, ignored squad depth entirely, now facing a structural crisis entirely of their own making.",
-    flames: '🔥', flameCaption: 'The fire is the squad. The squad is the fire.',
-    review: "<strong>Kerr</strong> has achieved something genuinely remarkable: spending <strong>£33.1m on two players</strong> in a league where the entire budget is £40m. Fowler at £18.9m and Ferdinand at £14.2m. Those two bids alone exceeded what seven other managers spent across their entire Round 1.<br><br>This is not a strategy. This is what happens when you open the auction sheet, see Fowler and Ferdinand at the top, and completely blank on the existence of every other player. <strong>£4.6m for twelve positions.</strong> That is approximately 38p each in real terms. The subs bench will need to be sourced from a Panini sticker book reject pile.<br><br>The team name is the greatest in the league and deserved better. It deserved a squad. Instead it has a front two that could challenge for the most expensive partnership in fantasy league history, backed up by <strong>Beardsley, Ripley</strong>, and whatever is left in a budget bin marked other.<br><br>Fowler will generate a 9.0 every week. Ferdinand will generate an 8.5. The goalkeeper will generate a 4.0. The defenders will generate confusion. On aggregate, Kerr will lose nearly every head-to-head matchup despite having two of the finest strikers available.",
-    good: 'Fowler and Ferdinand will score more points per appearance than anyone in the league',
-    bad: 'Everything else. The entire concept of squad depth. Gone. All of it.'
-  }
+    id: 'kerr', manager: 'Kerr', fullname: "Do Women Prefer Flowers to Seaman?",
+    verdict: 'shaky', verdictText: "🪣 Bargain Bin Survival",
+    comparison: "Any Newcastle manager after the Keegan era",
+    compReason: "Inherited a crisis of someone else's making — except in this case, the person who made the crisis is also themselves.",
+    flames: '🔥',
+    flameCaption: 'Still the league laughing stock.',
+    review: "<strong>Kerr</strong>'s Round 2 consisted of bidding £0.1m on basically every defender on the Arsenal and Liverpool team sheets and hoping one of them stuck. Three did: <strong>Lee Dixon, John Scales, Craig Hignett</strong>. Seven other bids lost, including the £0.5m on John Barnes and the £1m double-shot on Cole and James.<br><br>7 players signed. £35.7m spent in total. <strong>£4.3m left for 9 positions.</strong> Those are the numbers. Those are actually the numbers. The only way this gets worse is if Robbie Fowler gets a long-term injury, in which case the team name becomes accidentally philosophical.<br><br>The Fowler-Ferdinand strike force will generate heaps of points every week. The rest of the squad will generate silence. Round 3 needs to be a miracle of bargain hunting or this is permanently over.",
+    good: 'Lee Dixon at £0.1m is quietly excellent value for a regular Premier League defender',
+    bad: '£4.3m. Nine. Positions. Kerr is about to assemble the cheapest XI in the history of the league.'
+  },
 ];
+
 
 function renderReviews() {
   const container = document.getElementById('reviews-container');
@@ -2509,7 +2686,8 @@ function renderReviews() {
 renderStandings();
 renderOverviewCards();
 renderSquads();
-renderBids(bidsR1);
+renderBids(bidsR2, 'bids-body-r2');
+renderBids(bidsR1, 'bids-body');
 renderPool(poolPlayers);
 renderReviews();
 
