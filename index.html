@@ -1177,6 +1177,14 @@
   }
 
   .highlight-row td { background: rgba(255,215,0,0.04) !important; }
+  .squad-pos-group {
+    margin-bottom: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    width: 100%;
+  }
+  .squad-pos-group:last-child { margin-bottom: 0; }
 </style>
 </head>
 <body>
@@ -1912,35 +1920,11 @@ function renderSquads() {
 function renderSquadCards(list) {
   const grid = document.getElementById('squads-grid');
   grid.innerHTML = '';
-  
-  const posOrder = { 'GK': 1, 'DF': 2, 'MF': 3, 'ST': 4 };
-
   list.forEach(m => {
-    // Sort the squad by the custom position order
-    const sortedSquad = [...m.squad].sort((a, b) => posOrder[a.pos] - posOrder[b.pos]);
-    
-    // Group players into paragraphs based on position
-    const groups = sortedSquad.reduce((acc, p) => {
-      if (!acc[p.pos]) acc[p.pos] = [];
-      acc[p.pos].push(p);
-      return acc;
-    }, {});
-
-    // Ensure we process them in the correct order (GK, DF, MF, ST)
-    const sortedPosKeys = Object.keys(groups).sort((a, b) => posOrder[a] - posOrder[b]);
-
     const card = document.createElement('div');
     card.className = 'manager-card';
     card.onclick = () => openModal(m);
     const wonClass = m.players >= 8 ? 'fill-high' : m.players >= 5 ? 'fill-mid' : 'fill-low';
-    
-    // Build the list of paragraphs for each position group
-    const playerListHtml = sortedPosKeys.map(pos => `
-      <div class="squad-pos-group">
-        ${groups[pos].map(p => `<span class="player-chip"><span class="chip-pos">${p.pos}</span>${p.name}</span>`).join('')}
-      </div>
-    `).join('');
-
     card.innerHTML = `
       <div class="card-header">
         <div>
@@ -1955,7 +1939,7 @@ function renderSquadCards(list) {
           <div class="stat-item"><label>Budget</label><value class="${m.remaining > 15 ? 'green' : m.remaining > 8 ? 'amber' : 'red'}">£${m.remaining}m</value></div>
         </div>
         <div class="players-list" style="display:block;">
-          ${playerListHtml}
+          ${getGroupedSquadHtml(m.squad)}
         </div>
       </div>
     `;
@@ -2494,6 +2478,27 @@ function filterPool() {
   renderPool(list);
 }
 
+  function getGroupedSquadHtml(squad) {
+  const posOrderMap = { 'GK': 1, 'DEF': 2, 'DF': 2, 'MID': 3, 'MF': 3, 'ST': 4 };
+  const sortedSquad = [...squad].sort((a, b) => posOrderMap[a.pos] - posOrderMap[b.pos]);
+  
+  const groups = sortedSquad.reduce((acc, p) => {
+    let key = p.pos;
+    if (key === 'DF') key = 'DEF';
+    if (key === 'MF') key = 'MID';
+    if (!acc[key]) acc[key] = [];
+    acc[key].push(p);
+    return acc;
+  }, {});
+
+  const order = ['GK', 'DEF', 'MID', 'ST'];
+  return order.filter(k => groups[k]).map(k => `
+    <div class="squad-pos-group">
+      ${groups[k].map(p => `<span class="player-chip"><span class="chip-pos">${p.pos}</span>${p.name}</span>`).join('')}
+    </div>
+  `).join('');
+}
+  
 // ══ MODAL ══
 function openModal(m) {
   document.getElementById('modal-name').textContent = m.fullname;
@@ -2502,10 +2507,11 @@ function openModal(m) {
   document.getElementById('modal-spent').textContent = `£${m.spent}m`;
   document.getElementById('modal-budget').textContent = `£${m.remaining}m`;
   document.getElementById('modal-analysis').textContent = m.analysis;
+  
   const sq = document.getElementById('modal-squad');
-  sq.innerHTML = m.squad.map(p =>
-    `<span class="player-chip">${posTag(p.pos)} ${p.name} <span style="color:var(--muted);font-size:10px">${p.club}</span></span>`
-  ).join('');
+  // This uses the shared grouping logic to ensure order and paragraphs
+  sq.innerHTML = getGroupedSquadHtml(m.squad);
+  
   document.getElementById('modal-overlay').classList.add('open');
 }
 
