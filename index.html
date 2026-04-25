@@ -424,6 +424,14 @@
     gap: 6px;
   }
 
+  .squad-pos-group {
+    margin-bottom: 12px;
+  }
+
+  .squad-pos-group:last-child {
+    margin-bottom: 0;
+  }
+
   .player-chip {
     font-size: 11px;
     font-family: 'Barlow Condensed', sans-serif;
@@ -1196,7 +1204,6 @@
 
 <main>
 
-  <!-- ══ OVERVIEW ══ -->
   <section id="overview" class="section active">
     <div class="section-title">League Overview</div>
     <div class="section-desc">Round 1 and Round 2 complete · Round 3 upcoming · Season awaiting kick-off</div>
@@ -1240,7 +1247,6 @@
     <div class="cards-grid" id="overview-cards"></div>
   </section>
 
-  <!-- ══ STANDINGS ══ -->
   <section id="standings" class="section">
     <div class="section-title">Manager Standings</div>
     <div class="section-desc">Ranked by performance across Rounds 1 and 2 · Click a row for full squad details</div>
@@ -1261,7 +1267,6 @@
     </table>
   </section>
 
-  <!-- ══ SQUADS ══ -->
   <section id="squads" class="section">
     <div class="section-title">Squad Viewer</div>
     <div class="section-desc">Browse every manager's signed players after Rounds 1 and 2</div>
@@ -1276,7 +1281,6 @@
     <div class="cards-grid" id="squads-grid"></div>
   </section>
 
-  <!-- ══ BID RESULTS ══ -->
   <section id="bids" class="section">
     <div class="section-title">Bid Results</div>
     <div class="section-desc">Full auction history · Winners highlighted in green</div>
@@ -1333,7 +1337,6 @@
     </div>
   </section>
 
-  <!-- ══ PLAYER POOL ══ -->
   <section id="pool" class="section">
     <div class="section-title">Player Pool</div>
     <div class="section-desc">All available players · Struck-through = signed · Filter by position or availability</div>
@@ -1357,7 +1360,6 @@
     <div class="pool-grid" id="pool-grid"></div>
   </section>
 
-  <!-- ══ SQUAD REVIEWS ══ -->
   <section id="reviews" class="section">
     <div class="section-title">Squad Reviews</div>
     <div class="section-desc">Brutally honest analysis of every squad after Rounds 1 and 2 · No managers were harmed in the writing of this page (emotionally maybe)</div>
@@ -1365,7 +1367,6 @@
     <div id="reviews-container"></div>
   </section>
 
-  <!-- ══ MATCH REPORTS ══ -->
   <section id="reports" class="section">
     <div class="section-title">Match Reports</div>
     <div class="section-desc">Weekly results, ratings and drama as the season unfolds</div>
@@ -1425,7 +1426,6 @@
 
 </main>
 
-<!-- Modal -->
 <div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)">
   <div class="modal" id="modal">
     <div class="modal-header">
@@ -1912,11 +1912,35 @@ function renderSquads() {
 function renderSquadCards(list) {
   const grid = document.getElementById('squads-grid');
   grid.innerHTML = '';
+  
+  const posOrder = { 'GK': 1, 'DF': 2, 'MF': 3, 'ST': 4 };
+
   list.forEach(m => {
+    // Sort the squad by the custom position order
+    const sortedSquad = [...m.squad].sort((a, b) => posOrder[a.pos] - posOrder[b.pos]);
+    
+    // Group players into paragraphs based on position
+    const groups = sortedSquad.reduce((acc, p) => {
+      if (!acc[p.pos]) acc[p.pos] = [];
+      acc[p.pos].push(p);
+      return acc;
+    }, {});
+
+    // Ensure we process them in the correct order (GK, DF, MF, ST)
+    const sortedPosKeys = Object.keys(groups).sort((a, b) => posOrder[a] - posOrder[b]);
+
     const card = document.createElement('div');
     card.className = 'manager-card';
     card.onclick = () => openModal(m);
     const wonClass = m.players >= 8 ? 'fill-high' : m.players >= 5 ? 'fill-mid' : 'fill-low';
+    
+    // Build the list of paragraphs for each position group
+    const playerListHtml = sortedPosKeys.map(pos => `
+      <div class="squad-pos-group">
+        ${groups[pos].map(p => `<span class="player-chip"><span class="chip-pos">${p.pos}</span>${p.name}</span>`).join('')}
+      </div>
+    `).join('');
+
     card.innerHTML = `
       <div class="card-header">
         <div>
@@ -1930,8 +1954,8 @@ function renderSquadCards(list) {
           <div class="stat-item"><label>Players</label><value class="${wonClass}">${m.players}</value></div>
           <div class="stat-item"><label>Budget</label><value class="${m.remaining > 15 ? 'green' : m.remaining > 8 ? 'amber' : 'red'}">£${m.remaining}m</value></div>
         </div>
-        <div class="players-list">
-          ${m.squad.map(p => `<span class="player-chip"><span class="chip-pos">${p.pos}</span>${p.name}</span>`).join('')}
+        <div class="players-list" style="display:block;">
+          ${playerListHtml}
         </div>
       </div>
     `;
@@ -2073,7 +2097,7 @@ const allPoolPlayers = [
   {name:'Andy Todd',club:'Bolton',pos:'Defender'},
   {name:'Gudni Bergsson',club:'Bolton',pos:'Defender'},
   {name:'Erland Johnsen',club:'Chelsea',pos:'Defender'},
-  {name:'Michael Duberry',club:'Chelsea',pos:'Defender'},
+  {name:'Michael Dubbery',club:'Chelsea',pos:'Defender'},
   {name:'Jakob Kjeldbjerg',club:'Chelsea',pos:'Defender'},
   {name:'Terry Phelan',club:'Chelsea',pos:'Defender'},
   {name:'David Lee',club:'Chelsea',pos:'Defender'},
@@ -2622,7 +2646,7 @@ const reviews = [
     compReason: "Warm-hearted, universally loved, makes shrewd picks that everyone respects. A proper football man.",
     flames: '🔥🔥🔥🔥',
     flameCaption: 'Bareham is just lovely, isn\'t he?',
-    review: "A genuinely pleasing Round 2 from <strong>Bareham</strong>. You can feel the warmth radiating off this squad. <strong>Savo Milošević at £4m</strong> is the kind of characterful striker pick that only someone with genuine football feeling would make. <strong>Rob Jones at £1.5m</strong> is a proper, proper full-back. <strong>Andy Sinton at £1m</strong> and <strong>Peter Beagrie at £0.1m</strong> are lovely little additions that round out the squad with honest, hard-working players.<br><br>The <strong>David James tiebreaker was narrowly lost to Davies at £4.3m</strong>, which stings but only slightly — it leaves Bareham with £16.5m intact for 9 positions and all the tactical options still in play. Sometimes not winning a bid is the best thing that can happen.<br><br>Round 1 was a painful near-miss experience — eight times second-highest bidder. Round 2 has completely reset the narrative. Four wins out of twelve, smart prices throughout, and a squad that is genuinely starting to look like one that would finish top half. Bareham is one of those managers that the rest of the league is quietly rooting for. A proper football man. We all love it.",
+    review: "A genuinely pleasing Round 2 from <strong>Bareham</strong>. You can feel the warmth radiating off this squad. <strong>Savo Milošević at £4m</strong> is the kind of characterful striker pick that only someone with genuine football feeling would make. <strong>Rob Jones at £1.5m</strong> is a proper, proper full-back. <strong>Andy Sinton at £1 m</strong> and <strong>Peter Beagrie at £0.1m</strong> are lovely little additions that round out the squad with honest, hard-working players.<br><br>The <strong>David James tiebreaker was narrowly lost to Davies at £4.3m</strong>, which stings but only slightly — it leaves Bareham with £16.5m intact for 9 positions and all the tactical options still in play. Sometimes not winning a bid is the best thing that can happen.<br><br>Round 1 was a painful near-miss experience — eight times second-highest bidder. Round 2 has completely reset the narrative. Four wins out of twelve, smart prices throughout, and a squad that is genuinely starting to look like one that would finish top half. Bareham is one of those managers that the rest of the league is quietly rooting for. A proper football man. We all love it.",
     good: 'Milošević at £4m is the kind of pick made with genuine football knowledge, not auction panic',
     bad: 'The James tiebreaker resolution could still swing both directions — a rare moment of uncertainty for the rest of an otherwise rock-solid plan'
   },
