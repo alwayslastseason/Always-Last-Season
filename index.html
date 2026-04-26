@@ -1185,6 +1185,40 @@
     width: 100%;
   }
   .squad-pos-group:last-child { margin-bottom: 0; }
+  /* Lineup Selection Styles */
+  .player-chip.selectable { cursor: pointer; transition: all 0.2s; }
+  .player-chip.selected-chip { 
+    background: var(--green) !important; 
+    color: #000 !important; 
+    border-color: #fff !important;
+    box-shadow: 0 0 10px rgba(0, 200, 83, 0.4);
+  }
+  .player-chip.disabled-chip { opacity: 0.5; cursor: not-allowed; }
+
+  .lineup-controls {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+  }
+
+  .btn-lineup {
+    font-family: 'Bebas Neue', sans-serif;
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    letter-spacing: 1px;
+    transition: all 0.2s;
+  }
+
+  .btn-lock { background: var(--green); color: #000; }
+  .btn-lock:disabled { background: var(--muted); opacity: 0.5; cursor: not-allowed; }
+  .btn-unlock { background: var(--red); color: #fff; }
+  .btn-send { background: var(--amber); color: #000; text-align: center; text-decoration: none; display: block; }
 </style>
 </head>
 <body>
