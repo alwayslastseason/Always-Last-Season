@@ -2623,16 +2623,112 @@ function showTab(id) {
 const reviews = [
   {
     id: 'cotton', manager: 'Cotton', fullname: "Real SoSoBad",
-    verdict: 'genius', verdictText: "🧠 Drafting Dominance",
+    verdict: 'genius', verdictText: "🧠 The Completionist",
     comparison: "Sir Alex Ferguson",
-    compReason: "Built it early, then added specific bench strength. Master of the market.",
-    flames: '🔥🔥🔥🔥🔥',
-    flameCaption: 'Title Favourites.',
-    review: "Cotton has managed his budget with surgical precision. 15 players now signed.",
-    good: 'Niall Quinn for £0.7m is an absolute steal for a backup striker.',
-    bad: 'Budget went into the red slightly, but the squad is complete.'
+    compReason: "Built a terrifying United-heavy core and then filled the gaps with veteran grit.",
+    review: "Cotton has spent Round 3 behaving like a man who already knows where the trophy is kept. Securing Pavel Srníček for £2.4m is a massive upgrade in goal, finally giving that Man Utd-heavy defense a reliable pair of hands behind them. Adding Niall Quinn for £0.7m is the ultimate tactical insurance policy—because when Cantona and Sheringham aren't enough, you simply bring on a 6ft 4in Irishman to cause chaos.<br><br>The squad is now 15 deep with just £0.1m left in the pocket. It's balanced, it's experienced, and it's deeply annoying for everyone else to look at. Highly unlikely this goes wrong.",
+    good: 'Srníček and Quinn for a combined £3.1m adds elite depth for peanuts.',
+    bad: 'Only £0.1m left for the final slot means the 16th man is likely a cardboard cutout of Phil Babb.'
   },
-  // Add more updated reviews as needed
+  {
+    id: 'masterman', manager: 'Masterman', fullname: "Best Tomwich Albion",
+    verdict: 'solid', verdictText: "🛡️ The Great Wall of Leeds",
+    comparison: "George Graham",
+    compReason: "If you can't beat them, make sure they have to go through five different Leeds defenders first.",
+    review: "After a sleepy start to the auction, Masterman has ended Round 3 with a squad that looks like it could survive a siege. Winning Colin Cooper, David Wetherall, and Steve Chettle in one swoop is a statement: 'You shall not pass, and if you do, you will probably get a bruised shin.' The midfield also looks much sharper with Andy Impey providing pace.<br><br>With 16 players signed, the roster is full and the budget is spent. It is a very 'honest' squad—lots of 7/10 performers who will show up every week and do the dirty work. If Ian Wright stays fit, this team is a genuine contender.",
+    good: 'Total squad completion. No more panic bidding required.',
+    bad: 'A very high concentration of Leeds and Forest defenders. One bad Saturday in the East Midlands could be fatal.'
+  },
+  {
+    id: 'davies', manager: 'Davies', fullname: "Paul McGregor's Mullet",
+    verdict: 'decent', verdictText: "🎢 The Chaos Merchant",
+    comparison: "Kevin Keegan",
+    compReason: "Spent money like it was going out of fashion to fix a striker crisis.",
+    review: "Davies went into Round 3 with a lot of money and zero strikers. He left with Kevin Campbell, Efan Ekoku, and John Spencer. That is what we call a 'corrective spree.' Spending £14.4m in one round is the fantasy equivalent of a mid-life crisis, but it has worked.<br><br>The squad is now 16-strong and the bank account is a dry £0.3m. It is a fascinating mix of vintage Man Utd steel and Wimbledon unpredictability. It is either going to finish 1st or 12th; there is absolutely no middle ground.",
+    good: 'Tripling down on strikers solved the squad’s biggest weakness in 20 minutes.',
+    bad: 'Lars Bohinen and John Moncur in the same midfield is a high-stakes gamble on technical flair over actual running.'
+  },
+  {
+    id: 'meyers', manager: 'Meyers', fullname: "I'll Be Back Four",
+    verdict: 'solid', verdictText: "🏗️ Finally, A Defense",
+    comparison: "The Terminator",
+    compReason: "Promised he'd be back with a defense. It took three rounds, but he eventually showed up.",
+    review: "Hallelujah. Meyers has actually signed some defenders. Des Walker, Slaven Bilic, and Darren Peacock have arrived to ensure Peter Schmeichel isn't just standing there facing a firing squad every week. Signing Neville Southall as a backup keeper is the ultimate 'flex'.<br><br>With 14 players and £2.7m left, Meyers has a bit of wiggle room to find two more squad fillers. The Collymore/Bergkamp partnership remains the jewel in the crown, and now they actually have a platform to play from.",
+    good: 'Des Walker at £3.5m is expensive, but you can’t put a price on the man.',
+    bad: 'Still feels like a Galacticos project—great starters, but the bench might be a bit thin.'
+  },
+  {
+    id: 'roach', manager: 'Roach', fullname: "Eze Ya Later",
+    verdict: 'solid', verdictText: "🎯 The Sniper",
+    comparison: "Harry Redknapp",
+    compReason: "Doesn't buy much, but when he does, it's a big, flashy name.",
+    review: "Roach didn't buy many players in Round 3, but he bought David Hirst for £4.1m. In 1995, a fit David Hirst is essentially a cheat code with a left foot like a traction engine. Pair him with Faustino Asprilla and you have the most '90s vibes strike force in history.<br><br>The squad is only 12 players deep, which is a worry for the long season ahead. Roach has £1.1m left to find four more warm bodies. He is betting heavily on his Big XI winning the league by Christmas.",
+    good: 'David Hirst. If his ankles hold up, this is a title-winning move.',
+    bad: '12 players is a very thin squad. One flu bug at the Newcastle training ground and Roach is in trouble.'
+  },
+  {
+    id: 'bareham', manager: 'Bareham', fullname: "For Sure",
+    verdict: 'genius', verdictText: "💸 The Value King",
+    comparison: "Arsène Wenger",
+    compReason: "Found world-class talent and bargain deals in the same market.",
+    review: "Bareham had a storming Round 3. Getting Lee Sharpe for £2.8m and Uwe Rösler for £2.5m is outrageous value. Sharpe brings the flair, Rösler brings the Man City cult-hero goals. assembled a squad that looks like it was curated by a man with genuine soul.<br><br>With 14 players and a healthy £9.0m still in the bank, Bareham is the richest man in the league relative to his needs. He can afford to go big on his final two slots.",
+    good: 'Rösler and Amokachi for £4.5m total is the bargain of the century.',
+    bad: 'Losing the David James tiebreaker in R2 still hurts the GK position slightly.'
+  },
+  {
+    id: 'barber', manager: 'Barber', fullname: "Sonnet FC",
+    verdict: 'shaky', verdictText: "🏦 The Scrooge",
+    comparison: "Daniel Levy",
+    compReason: "Has all the money in the world. Refuses to spend it.",
+    review: "Barber is currently sitting on £22.1m. For context, he could have bought Alan Shearer and still had change for a pint. Instead, he spent Round 3 picking up Alan Stubbs and John Salako. It is sensible business, but at some point, you have to buy a Ferrari.<br><br>The squad is 12 players deep and has some talent, but it lacks a 'nuclear' option. Barber is clearly waiting for a Round 4 that may never come. Either way, it is a very confusing strategy.",
+    good: 'Alan Stubbs for £0.3m is a great bit of business.',
+    bad: 'Unspent money doesn\'t score points. Unless there is a Financial Fair Play trophy.'
+  },
+  {
+    id: 'kerr', manager: 'Kerr', fullname: "Do Women Prefer Flowers to Seaman?",
+    verdict: 'shaky', verdictText: "🛶 Sinking Feeling",
+    comparison: "Bryan Robson",
+    compReason: "Has two superstars up front and a defense made of hopeful wishes.",
+    review: "Kerr spent his remaining pennies on Graham Stuart, Alan Kimble, and Phil Neville. It's the fantasy equivalent of fixing a hole in the Titanic with a piece of chewing gum. He now has 10 players and £3.5m left for 6 positions. The math is terrifying.<br><br>The strategy is simple: Fowler and Ferdinand need to score 4 goals every week because the defense is likely to concede 3. If one of them tweaks a hamstring, the team is in deep trouble.",
+    good: 'Phil Neville for £0.2m is actually a very smart utility pick.',
+    bad: 'The lack of a starting goalkeeper is a giant, gaping hole in the middle of the squad.'
+  },
+  {
+    id: 'hodgson', manager: 'Hodgson', fullname: "Not Sure",
+    verdict: 'decent', verdictText: "🦖 The Target Man",
+    comparison: "Joe Royle",
+    compReason: "Big, strong, and direct. A team built to bully people in the air.",
+    review: "Hodgson added Earl Barrett and Peter Ndlovu in Round 3, further cementing his status as the king of the 'workhorse' squad. Between Andy Cole, Chris Sutton, and Ndlovu, he has a strike force that will give center-backs nightmares.<br><br>With 12 players and £2.8m left, he still needs a bit more depth. The midfield is creative, but if one of the big strikers goes down, there isn't much in the way of a Plan B.",
+    good: 'Peter Ndlovu is a great "Plan C" off the bench.',
+    bad: 'Only 12 players signed. The Christmas fixture congestion could be brutal.'
+  },
+  {
+    id: 'rowe', manager: 'Rowe', fullname: "Autoglass Trophy 1992",
+    verdict: 'genius', verdictText: "🍷 The Fine Wine",
+    comparison: "Arsène Wenger",
+    compReason: "Built a masterpiece early and spent Round 3 drinking an expensive Bordeaux.",
+    review: "Rowe did absolutely nothing in Round 3. Why? Because when you have Giggs, Gullit, Le Tissier, Yeboah, and Rob Lee, what else do you really need? He spent the round watching the other managers scramble for Alan Kimble while he polished his trophy cabinet.<br><br>The only risk is that he only has 14 players and £0.6m left. He needs two more bodies to fill the bench, and he’s going to have to find them in the free bin.",
+    good: 'Total confidence in the existing squad.',
+    bad: 'If the injury bug hits the midfield, the Autoglass Trophy might be heading for the scrapheap.'
+  },
+  {
+    id: 'holt', manager: 'Holt', fullname: "Kalima Shakhtar D",
+    verdict: 'genius', verdictText: "🕵️ The Ghost",
+    comparison: "Howard Wilkinson",
+    compReason: "Solid, dependable, and quietly efficient. No fuss, just results.",
+    review: "Holt took the round off, presumably to count the £8.9m he still has sitting in his vault. He already has 14 players including a rock-solid defense and the best goalkeeper in the league (Flowers). It is a squad built on high floor ratings.<br><br>He still needs two players, but with nearly £9m, he could buy two genuine starters from the remaining pool. Holt is the manager you forget about until he is top of the table.",
+    good: 'Exceptional financial health heading into the final stages.',
+    bad: 'Lacks a superstar striker to compete with the Fowler/Shearer owners.'
+  },
+  {
+    id: 'smyth', manager: 'Smyth', fullname: "I Will Love It If We Beat Them United",
+    verdict: 'shaky', verdictText: "🚢 The HMS Alan Shearer",
+    comparison: "Blackburn Rovers",
+    compReason: "Give it to Alan. Hope for the best. Repeat.",
+    review: "Smyth remained inactive in Round 3, which is brave considering his squad is still essentially Alan Shearer and some guys he met at the pub. Don't get us wrong, Shearer is the best player in the draft, but even he can't defend corners.<br><br>12 players signed, £5.75m left. Smyth needs to use that money to find some reliable midfielders, or Shearer is going to spend 90 minutes every week chasing long balls into the corner flags.",
+    good: 'Shearer is the only guaranteed 30-goal man in the league.',
+    bad: 'The supporting cast is... modest. Very modest.'
+  }
 ];
 
 function renderReviews() {
