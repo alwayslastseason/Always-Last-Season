@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Always Last Season - Retro Fantasy Football</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <svg width="0" height="0" style="position:absolute; width:0; height:0;">
+        <defs>
+            <linearGradient id="grad-bw-stripes" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="20%" stop-color="#000"/><stop offset="20%" stop-color="#fff"/>
+                <stop offset="40%" stop-color="#fff"/><stop offset="40%" stop-color="#000"/>
+                <stop offset="60%" stop-color="#000"/><stop offset="60%" stop-color="#fff"/>
+                <stop offset="80%" stop-color="#fff"/><stop offset="80%" stop-color="#000"/>
+            </linearGradient>
+        </defs>
+    </svg>
+    <svg width="0" height="0" style="position:absolute; width:0; height:0;">
+        <defs>
+            <linearGradient id="grad-newcastle" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="25%" stop-color="#000"/><stop offset="25%" stop-color="#fff"/>
+                <stop offset="50%" stop-color="#fff"/><stop offset="50%" stop-color="#000"/>
+                <stop offset="75%" stop-color="#000"/><stop offset="75%" stop-color="#fff"/>
+            </linearGradient>
+            <linearGradient id="grad-gill" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="50%" stop-color="#00529b"/><stop offset="50%" stop-color="#fff"/>
+            </linearGradient>
+            <linearGradient id="grad-villa" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="50%" stop-color="#670E36"/><stop offset="50%" stop-color="#95BFE5"/>
+            </linearGradient>
+            <linearGradient id="grad-palace" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="50%" stop-color="#C8102E"/><stop offset="50%" stop-color="#1B458F"/>
+            </linearGradient>
+            <linearGradient id="grad-rochdale" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="50%" stop-color="#004b87"/><stop offset="50%" stop-color="#fff"/>
+            </linearGradient>
+            <linearGradient id="grad-stoke" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="20%" stop-color="#e03a3e"/><stop offset="20%" stop-color="#fff"/>
+                <stop offset="40%" stop-color="#fff"/><stop offset="40%" stop-color="#e03a3e"/>
+                <stop offset="60%" stop-color="#e03a3e"/><stop offset="60%" stop-color="#fff"/>
+                <stop offset="80%" stop-color="#fff"/><stop offset="80%" stop-color="#e03a3e"/>
+            </linearGradient>
+        </defs>
+    </svg>
+
+    <header>
+        <nav>
+            <a href="index.html">[ HOME ]</a>
+        </nav>
+    </header>
+
+    <div id="home-page" class="page-view">
+        
+        <div class="home-title-container">
+            <div class="home-title-text">
+                <h1 class="home-title">ALWAYS LAST SEASON</h1>
+                <p class="home-subtitle">(the retro fantasy football game)</p>
+            </div>
+        </div>
+
+        <section class="hero">
+            <h2>GAMEWEEK 9</h2>
+            <p><strong>DEADLINE:</strong> SATURDAY, NOON</p>
+        </section>
+
+        <h2>SELECT TEAM</h2>
+        <div class="grid">
+            
+            <div onclick="window.location.href='team-paul.html'" class="card">
+                <div class="card-icon" style="filter: drop-shadow(0 0 8px #ff00ff);">
+                    <svg width="80" height="80" viewBox="0 0 100 100">
+                        <path d="M10,10 L90,10 L90,60 Q90,95 50,95 Q10,95 10,60 Z" fill="#DA291C" stroke="#FBE122" stroke-width="5"/>
+                        <text x="50" y="55" font-size="45" text-anchor="middle" dominant-baseline="middle">💪</text>
+                    </svg>
+                </div>
+                <h3 style="color: #ff00ff;">I'll be back four</h3>
+                <p>MANAGER: P. MEYERS</p>
+            </div>
+
+            <div onclick="window.location.href='team-andy.html'" class="card">
+                <div class="card-icon" style="filter: drop-shadow(0 0 8px #00ffff);">
+                    <svg width="80" height="80" viewBox="0 0 100 100">
+                        <circle cx="50" cy="50" r="45" fill="url(#grad-newcastle)" stroke="#000" stroke-width="4"/>
+                        <text x="50" y="55" font-size="45" text-anchor="middle" dominant-baseline="middle">🌸</text>
+                    </svg>
+                </div>
+                <h3 style="color: #00ffff;">Do Women prefer Flowers to Seaman?</h3>
+                <p>MANAGER: A. KERR</p>
+            </div>
+
+            <div onclick="window.location.href='team-barber.html'" class="card">
+                <div class="card-icon" style="filter: drop-shadow(0 0 8px #ffff00);">
+                    <svg width="80" height="80" viewBox="0 0 100 100">
+                        <polygon points="50,5 95,50 50,95 5,50" fill="url(#grad-gill)" stroke="#00529b" stroke-width="4"/>
+                        <text x="50" y="55" font-size="40" text-anchor="middle" dominant-baseline="middle">🐴</text>
+                        <text x="44" y="47" font-size="22" text-anchor="middle" dominant-baseline="middle">🕶️</text>
+                    </svg>
+                </div>
+                <h3 style="color: #ffff00;">Sonnet FC</h3>
+                <p>MANAGER: D. BARBER</p>
+            </div>
+
+            <div onclick="window.location.href='team-bareham.html'" class="card">
+                <div class="card-icon" style="filter: drop-shadow(0 0 8px #39ff14);">
+                    <svg width="80" height="80" viewBox="0 0 100 100">
+                        <path d="M10,10 L90,10 L90,50 A40,40 0 0,1 50,95 A40,40 0 0,1 10,50 Z" fill="#C8102E" stroke="#fff" stroke-width="4"/>
+                        <text x="50" y="55" font-size="45" text-anchor="middle" dominant-baseline="middle">🐦</text>
+                    </svg>
+                </div>
+                <h3 style="color: #39ff14;">For Sure</h3>
+                <p>MANAGER: M. BAREHAM</p>
+            </div>
+
+            <div onclick="window.location.href='team-cotton.html'" class="card">
+                <div class="card-icon" style="filter: drop-shadow(0 0 8px #ffaa00);">
+                    <svg width="80" height="80" viewBox="0 0 100 100">
+                        <path d="M15,10 L85,10 L85,60 Q85,90 50,95 Q15,90 15,60 Z" fill="url(#grad-villa)" stroke="#FBE122" stroke-width="3"/>
+                        <text x="50" y="62" font-size="38" text-anchor="middle" dominant-baseline="middle">🐱</text>
+                        <text x="51" y="42" font-size="28" text-anchor="middle" dominant-baseline="middle">🧢</text>
+                    </svg>
+                </div>
+                <h3 style="color: #ffaa00;">Real SoSoBad</h3>
+                <p>MANAGER: M. COTTON</p>
+            </div>
+
+            <div onclick="window.location.href='team-davies.html'" class="card">
+                <div class="card-icon" style="filter: drop-shadow(0 0 8px #bb00ff);">
+                    <svg width="80" height="80" viewBox="0 0 100 100">
+                        <circle cx="50" cy="50" r="45" fill="#E53233" stroke="#fff" stroke-width="4"/>
+                        <path d="M30,45 C30,85 20,95 40,95 L60,95 C80,95 70,85 70,45 Z" fill="#3E2723"/>
+                        <text x="50" y="55" font-size="45" text-anchor="middle" dominant-baseline="middle">🌳</text>
+                    </svg>
+                </div>
+                <h3 style="color: #bb00ff;">Paul McGregor's mullet</h3>
+                <p>MANAGER: M. DAVIES</p>
+            </div>
+
+            <div onclick="window.location.href='team-masterman.html'" class="card">
+                <div class="card-icon" style="filter: drop-shadow(0 0 8px #ff0044);">
+                    <svg width="80" height="80" viewBox="0 0 100 100">
+                        <path d="M10,10 L90,10 L90,60 Q90,95 50,95 Q10,95 10,60 Z" fill="#fff" stroke="#1D428A" stroke-width="6"/>
+                        <path d="M13,13 L87,13 L87,59 Q87,91 50,91 Q13,91 13,59 Z" fill="none" stroke="#FFCD00" stroke-width="2"/>
+                        <text x="50" y="55" font-size="40" text-anchor="middle" dominant-baseline="middle">✊</text>
+                    </svg>
+                </div>
+                <h3 style="color: #ff0044;">Best Tomwich Albion</h3>
+                <p>MANAGER: T. MASTERMAN</p>
+            </div>
+
+            <div onclick="window.location.href='team-roach.html'" class="card">
+                <div class="card-icon" style="filter: drop-shadow(0 0 8px #0088ff);">
+                    <svg width="80" height="80" viewBox="0 0 100 100">
+                        <polygon points="50,5 95,50 50,95 5,50" fill="url(#grad-palace)" stroke="#fff" stroke-width="3"/>
+                        <text x="50" y="60" font-size="35" text-anchor="middle" dominant-baseline="middle">🦅</text>
+                        <text x="47" y="38" font-size="25" text-anchor="middle" dominant-baseline="middle">👑</text>
+                    </svg>
+                </div>
+                <h3 style="color: #0088ff;">Eze ya later</h3>
+                <p>MANAGER: S. ROACH</p>
+            </div>
+
+            <div onclick="window.location.href='team-hodgson.html'" class="card">
+                <div class="card-icon" style="filter: drop-shadow(0 0 8px #ccff00);">
+                    <svg width="80" height="80" viewBox="0 0 100 100">
+                        <polygon points="10,10 90,10 90,70 50,95 10,70" fill="#C8102E" stroke="#fff" stroke-width="4"/>
+                        <text x="50" y="50" font-size="45" text-anchor="middle" dominant-baseline="central" transform="rotate(180 50 50)">🐦</text>
+                    </svg>
+                </div>
+                <h3 style="color: #ccff00;">Not Sure</h3>
+                <p>MANAGER: D. HODGSON</p>
+            </div>
+
+            <div onclick="window.location.href='team-holt.html'" class="card">
+                <div class="card-icon" style="filter: drop-shadow(0 0 8px #ffd700);">
+                    <svg width="80" height="80" viewBox="0 0 100 100">
+                        <circle cx="50" cy="50" r="45" fill="url(#grad-rochdale)" stroke="#004b87" stroke-width="4"/>
+                        <text x="50" y="55" font-size="40" text-anchor="middle" dominant-baseline="middle">🍾</text>
+                    </svg>
+                </div>
+                <h3 style="color: #ffd700;">Kalima Shakhtar D</h3>
+                <p>MANAGER: I. HOLT</p>
+            </div>
+
+            <div onclick="window.location.href='team-rowe.html'" class="card">
+                <div class="card-icon" style="filter: drop-shadow(0 0 8px #00ffcc);">
+                    <svg width="80" height="80" viewBox="0 0 100 100">
+                        <path d="M10,10 L90,10 L90,60 A40,40 0 0,1 50,95 A40,40 0 0,1 10,60 Z" fill="url(#grad-stoke)" stroke="#000" stroke-width="4"/>
+                        <text x="50" y="55" font-size="40" text-anchor="middle" dominant-baseline="middle">🏺</text>
+                    </svg>
+                </div>
+                <h3 style="color: #00ffcc;">Autoglass Trophy 1992</h3>
+                <p>MANAGER: J. ROWE</p>
+            </div>
+
+            <div onclick="window.location.href='team-smyth.html'" class="card">
+                <div class="card-icon" style="filter: drop-shadow(0 0 8px #ff66b2);">
+                    <svg width="80" height="80" viewBox="0 0 100 100">
+                        <polygon points="50,5 95,50 50,95 5,50" fill="url(#grad-newcastle)" stroke="#000" stroke-width="4"/>
+                        <text x="50" y="55" font-size="40" text-anchor="middle" dominant-baseline="middle">❤️</text>
+                    </svg>
+                </div>
+                <h3 style="color: #ff66b2;">Love it if we beat them United</h3>
+                <p>MANAGER: R. SMYTH</p>
+            </div>
+        </div>
+    </div>
+
+    <footer><p>SYSTEM UPDATED // MAINTAINED BY ALSAI_BOT_v7.0</p></footer>
+
+</body>
+</html>
